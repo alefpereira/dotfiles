@@ -22,8 +22,15 @@ set -g __fish_git_prompt_color_untrackedfiles white
 pyenv init - | source
 pyenv virtualenv-init - | source
 
+
+### ~/.profile
+# Configurations below are better placed in ~/.profile instead of here,
+# setting them in ~/.profile makes their bins available in 'sh' commands called from other apps like nemo actions.
+# Needs logout to work.
+
 ## Setup VSCode Path
-export PATH="/home/alef/Softwares/VSCode-linux-x64/bin/:$PATH"
+# export PATH="/home/alef/Softwares/VSCode-linux-x64/bin/:$PATH"
 
 ## Rust Lang (rustup)
-set PATH $HOME/.cargo/bin $PATH
+# export PATH="$HOME/.cargo/bin:$PATH
+
