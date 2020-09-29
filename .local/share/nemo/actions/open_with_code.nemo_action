@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Open with Code
+Comment=Open files/directory with Code
+Icon-Name=com.visualstudio.code
+# Exec=<open_with_code.sh %F>
+Exec=sh -c 'code %F'
+Quote=double
+Selection=any
+Extensions=any;
