@@ -1,0 +1,8 @@
+[Nemo Action]
+
+Name=💻 Open in Terminator 💻
+Comment=Open the 'terminator' terminal in the selected folder
+Exec=terminator --working-directory="%F"
+Icon-Name=terminator
+Selection=any
+Extensions=dir;
