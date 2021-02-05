@@ -1,5 +1,7 @@
 set relativenumber
 syntax on
+filetype on
+filetype plugin on
 filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -19,4 +21,101 @@ set showcmd
 set hlsearch
 " Search as you type
 set incsearch
+
+" Install vim-plug if not found (neovim specifc)
+if has('nvim')
+    if empty(glob(stdpath('data'). 'site/autoload/plug.vim'))
+      silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    endif
+else
+" Install vim-plug if not found (vim specifc)
+    if empty(glob('~/.vim/autoload/plug.vim'))
+      silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    endif
+endif
+
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
+"" vim-plug manager setup
+if has('nvim')
+    call plug#begin(stdpath('data') . '/plugged')
+else
+    call plug#begin('~/.vim/plugged')
+endif
+
+" fugitive.vim: A Git wrapper so awesome, it should be illegal
+Plug 'tpope/vim-fugitive'
+
+" surround.vim: quoting/parenthesizing made simple
+Plug 'tpope/vim-surround'
+
+" A tree explorer plugin for vim.
+Plug 'scrooloose/nerdtree'
+
+" Syntax checking hacks for vim
+Plug 'scrooloose/syntastic'
+
+" A Vim plugin which shows a git diff in the sign column. It shows which lines have been added, modified, or removed.
+Plug 'airblade/vim-gitgutter'
+
+" lean & mean status/tabline for vim that's light as air
+Plug 'vim-airline/vim-airline'
+
+" Vim plugin for intensely nerdy commenting powers
+Plug 'scrooloose/nerdcommenter'
+
+" A collection of themes for vim-airline
+Plug 'vim-airline/vim-airline-themes'
+
+" Active fork of kien/ctrlp.vim—Fuzzy file, buffer, mru, tag, etc finder.
+Plug 'ctrlpvim/ctrlp.vim'
+
+" fzf :heart: vim
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+" A Vim plugin for visually displaying indent levels in code
+Plug 'nathanaelkane/vim-indent-guides'
+
+" one colorscheme pack to rule them all!
+Plug 'flazz/vim-colorschemes'
+
+" A simple, easy-to-use Vim alignment plugin.
+Plug 'junegunn/vim-easy-align'
+
+" Markdown Vim Mode
+Plug 'plasticboy/vim-markdown'
+
+" Better trailing whitespace highlighting for Vim
+Plug 'ntpeters/vim-better-whitespace'
+
+call plug#end()
+"" End of vim-plug manager setup
+
+" Terminal Color Scheme
+colorscheme wombat256mod
+
+"" Keymaps
+" Esc Remaps
+inoremap jk <Esc>
+" Backup remap for <C-[>. My keyboard layout is pt-BR,
+" so <C-`> in pt-br is same as <C-[> in en-us
+inoremap <C-`> <Esc>
+
+" Ctrl Backspace remap to delete word backward
+inoremap <C-BS> <C-W>
+" Workaround to ctrl backspace delete word backward to work
+noremap! <C-BS> <C-w>
+noremap! <C-h> <C-w>
+
+" Ctrl-J to brake line in Normal Mode
+nnoremap <NL> i<CR><ESC>
+
+" Enter insert new line below in Normal Mode
+nmap <CR> o<Esc>
 
