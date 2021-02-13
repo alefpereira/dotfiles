@@ -127,6 +127,7 @@ vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
 "" gitgutter configs
+set updatetime=100
 " let g:gitgutter_set_sign_backgrounds = 1
 highlight! link SignColumn LineNr
 " highlight SignColumn guibg=NONE ctermbg=NONE
