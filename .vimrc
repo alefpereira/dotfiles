@@ -92,6 +92,18 @@ Plug 'plasticboy/vim-markdown'
 " Better trailing whitespace highlighting for Vim
 Plug 'ntpeters/vim-better-whitespace'
 
+" commentary.vim: comment stuff out Tim Pope
+Plug 'tpope/vim-commentary'
+
+" obsession.vim: continuously updated session files
+Plug 'tpope/vim-obsession'
+
+" surround.vim: quoting/parenthesizing made simple
+Plug 'tpope/vim-surround'
+
+" sensible.vim: Defaults everyone can agree on
+Plug 'tpope/vim-sensible'
+
 call plug#end()
 "" End of vim-plug manager setup
 
