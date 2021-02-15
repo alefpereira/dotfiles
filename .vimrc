@@ -104,6 +104,9 @@ Plug 'tpope/vim-surround'
 " sensible.vim: Defaults everyone can agree on
 Plug 'tpope/vim-sensible'
 
+" Vim Markdown runtime files
+Plug 'tpope/vim-markdown'
+
 call plug#end()
 "" End of vim-plug manager setup
 
