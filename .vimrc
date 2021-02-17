@@ -141,6 +141,10 @@ nnoremap <A-k> :m .-2<CR>==
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
+"" airline/powerline settings
+" fix font symbols
+let g:airline_powerline_fonts = 1
+
 "" gitgutter configs
 set updatetime=100
 " let g:gitgutter_set_sign_backgrounds = 1
