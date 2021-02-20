@@ -20,6 +20,8 @@ set showcmd
 set hlsearch
 " Search as you type
 set incsearch
+" Set update time so gitgutter updates faster
+set updatetime=100
 
 " Install vim-plug if not found (neovim specifc)
 if has('nvim')
@@ -147,7 +149,6 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 let g:airline_powerline_fonts = 1
 
 "" gitgutter configs
-set updatetime=100
 " let g:gitgutter_set_sign_backgrounds = 1
 highlight! link SignColumn LineNr
 " highlight SignColumn guibg=NONE ctermbg=NONE
