@@ -24,6 +24,8 @@ set incsearch
 set updatetime=100
 " Set mouse support (Modes: Normal, Visual, Insert)
 set mouse+=nvi
+" Set screen to scroll following cursor offset
+set scrolloff=8
 " Set leader to space
 let mapleader = " "
 
@@ -195,4 +197,3 @@ function! ExecuteMacroOverVisualRange()
   echo "@".getcmdline()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
-
