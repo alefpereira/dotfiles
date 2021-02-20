@@ -104,6 +104,9 @@ Plug 'tpope/vim-sensible'
 " Vim Markdown runtime files
 Plug 'tpope/vim-markdown'
 
+" eunuch.vim: Helpers for UNIX
+Plug 'tpope/vim-eunuch'
+
 call plug#end()
 "" End of vim-plug manager setup
 
