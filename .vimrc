@@ -139,6 +139,12 @@ nnoremap <NL> i<CR><ESC>
 nnoremap <C-P> :Files<CR>
 " nnoremap <C-P> :FZF<CR>
 
+" Map ç to behave like : (commands). Improve abnt2 keyboard usability for vim.
+nnoremap ç :
+xnoremap ç :
+nnoremap <A-ç> :
+inoremap <A-ç> <Esc>:
+
 "" airline/powerline settings
 " fix font symbols
 let g:airline_powerline_fonts = 1
