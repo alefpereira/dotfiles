@@ -31,7 +31,7 @@ let mapleader = " "
 
 " Install vim-plug if not found (neovim specifc)
 if has('nvim')
-    if empty(glob(stdpath('data'). 'site/autoload/plug.vim'))
+    if empty(glob(stdpath('data'). '/site/autoload/plug.vim'))
       silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     endif
