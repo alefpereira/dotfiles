@@ -22,6 +22,8 @@ set hlsearch
 set incsearch
 " Set update time so gitgutter updates faster
 set updatetime=100
+" Set mouse support (Modes: Normal, Visual, Insert)
+set mouse+=nvi
 
 " Install vim-plug if not found (neovim specifc)
 if has('nvim')
