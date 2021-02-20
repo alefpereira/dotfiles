@@ -1,3 +1,4 @@
+set number
 set relativenumber
 syntax on
 filetype plugin indent on
