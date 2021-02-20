@@ -24,6 +24,8 @@ set incsearch
 set updatetime=100
 " Set mouse support (Modes: Normal, Visual, Insert)
 set mouse+=nvi
+" Set leader to space
+let mapleader = " "
 
 " Install vim-plug if not found (neovim specifc)
 if has('nvim')
@@ -146,6 +148,29 @@ nnoremap ç :
 xnoremap ç :
 nnoremap <A-ç> :
 inoremap <A-ç> <Esc>:
+
+"" Lots of great mapings. Thanks to ThePrimeagen for the inspiration
+" Prevent paste to replace register in visual mode
+xnoremap p "_dP
+
+" Select all text
+nnoremap <leader>a ggVG
+xnoremap <leader>a <Esc>ggVG
+
+" Copy to system clipboard using leader key. Y to copy all file.
+nnoremap <leader>y "+y
+xnoremap <leader>y "+y
+nnoremap <leader>Y gg"+yG
+
+" Paste from system clipboard with leader key.
+nnoremap <leader>p "+p
+xnoremap <leader>p "+p
+
+" Delete to blackhole
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
+
+"" End of Keymaps
 
 "" airline/powerline settings
 " fix font symbols
