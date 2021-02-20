@@ -151,6 +151,9 @@ xnoremap ç :
 nnoremap <A-ç> :
 inoremap <A-ç> <Esc>:
 
+" Esc to clear search highlights
+nnoremap <Esc> :noh<Esc>
+
 "" Lots of great mapings. Thanks to ThePrimeagen for the inspiration
 " Prevent paste to replace register in visual mode
 xnoremap p "_dP
