@@ -105,7 +105,7 @@ Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-surround'
 
 " sensible.vim: Defaults everyone can agree on
-Plug 'tpope/vim-sensible'
+" Plug 'tpope/vim-sensible'
 
 " eunuch.vim: Helpers for UNIX
 Plug 'tpope/vim-eunuch'
