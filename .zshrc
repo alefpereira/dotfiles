@@ -135,3 +135,5 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 PROMPT='%{$fg[yellow]%}[%D{%T}]%{$fg[white]%} '$PROMPT
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
