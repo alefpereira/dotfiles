@@ -127,9 +127,6 @@ noremap! <C-h> <C-w>
 " Ctrl-J to brake line in Normal Mode
 nnoremap <NL> i<CR><ESC>
 
-" Enter insert new line below in Normal Mode
-nmap <CR> o<Esc>
-
 " Move line(s) Alt-J (down) and Alt-K (up)
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
