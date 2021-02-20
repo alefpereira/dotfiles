@@ -58,9 +58,6 @@ Plug 'tpope/vim-surround'
 " A tree explorer plugin for vim.
 Plug 'scrooloose/nerdtree'
 
-" Syntax checking hacks for vim
-Plug 'scrooloose/syntastic'
-
 " A Vim plugin which shows a git diff in the sign column. It shows which lines have been added, modified, or removed.
 Plug 'airblade/vim-gitgutter'
 
