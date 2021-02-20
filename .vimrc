@@ -70,9 +70,6 @@ Plug 'scrooloose/nerdcommenter'
 " A collection of themes for vim-airline
 Plug 'vim-airline/vim-airline-themes'
 
-" Active fork of kien/ctrlp.vim—Fuzzy file, buffer, mru, tag, etc finder.
-Plug 'ctrlpvim/ctrlp.vim'
-
 " fzf :heart: vim
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -140,6 +137,10 @@ nnoremap <A-k> :m .-2<CR>==
 " inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" FZF Fuzzy ctrlP setup
+nnoremap <C-P> :Files<CR>
+" nnoremap <C-P> :FZF<CR>
 
 "" airline/powerline settings
 " fix font symbols
