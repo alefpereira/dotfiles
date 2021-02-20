@@ -101,9 +101,6 @@ Plug 'tpope/vim-surround'
 " sensible.vim: Defaults everyone can agree on
 Plug 'tpope/vim-sensible'
 
-" Vim Markdown runtime files
-Plug 'tpope/vim-markdown'
-
 " eunuch.vim: Helpers for UNIX
 Plug 'tpope/vim-eunuch'
 
