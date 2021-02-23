@@ -126,10 +126,6 @@ highlight ColorColumn ctermbg=238
 "" Keymaps
 " Esc Remaps
 inoremap jk <Esc>
-" Backup remap for <C-[>. My keyboard layout is pt-BR,
-" so <C-`> in pt-br is same as <C-[> in en-us
-inoremap <C-`> <Esc>
-vnoremap <C-`> <Esc>
 
 " Ctrl Backspace remap to delete word backward
 inoremap <C-BS> <C-W>
