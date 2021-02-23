@@ -135,11 +135,11 @@ highlight ColorColumn ctermbg=238
 " Esc Remaps
 inoremap jk <Esc>
 
-" Ctrl Backspace remap to delete word backward
-inoremap <C-BS> <C-W>
-" Workaround to ctrl backspace delete word backward to work
-noremap! <C-BS> <C-w>
-noremap! <C-h> <C-w>
+" " Ctrl Backspace remap to delete word backward
+" inoremap <C-BS> <C-W>
+" " Workaround to ctrl backspace delete word backward to work
+" noremap! <C-BS> <C-w>
+" noremap! <C-h> <C-w>
 
 " Ctrl-J to brake line in Normal Mode
 nnoremap <NL> i<CR><ESC>
