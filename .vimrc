@@ -30,6 +30,11 @@ set updatetime=100
 set mouse+=nvi
 " Set screen to scroll following cursor offset
 set scrolloff=8
+" Setup persistent undo history
+set noswapfile
+set nobackup
+set undodir=~/.undodir
+set undofile
 " Set leader to space
 let mapleader = " "
 
@@ -113,6 +118,9 @@ Plug 'tpope/vim-surround'
 
 " eunuch.vim: Helpers for UNIX
 Plug 'tpope/vim-eunuch'
+
+" The undo history visualizer for VIM
+Plug 'mbbill/undotree'
 
 call plug#end()
 "" End of vim-plug manager setup
