@@ -12,6 +12,10 @@ set expandtab
 set laststatus=2
 " Always show cursor position
 set ruler
+" Highlight current line
+set cursorline
+" Highlight colums
+set colorcolumn=80,100
 " Display command line’s tab complete options as a menu
 set wildmenu
 " Always show the command in the status line
@@ -113,8 +117,11 @@ Plug 'tpope/vim-eunuch'
 call plug#end()
 "" End of vim-plug manager setup
 
+"" Colors
 " Terminal Color Scheme
 colorscheme wombat256mod
+" Column lines color
+highlight ColorColumn ctermbg=238
 
 "" Keymaps
 " Esc Remaps
