@@ -73,6 +73,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " surround.vim: quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'
 
+" commentary.vim: comment stuff out
+Plug 'tpope/vim-commentary'
+
 " A tree explorer plugin for vim.
 Plug 'scrooloose/nerdtree'
 
@@ -81,9 +84,6 @@ Plug 'airblade/vim-gitgutter'
 
 " lean & mean status/tabline for vim that's light as air
 Plug 'vim-airline/vim-airline'
-
-" Vim plugin for intensely nerdy commenting powers
-Plug 'scrooloose/nerdcommenter'
 
 " A collection of themes for vim-airline
 Plug 'vim-airline/vim-airline-themes'
