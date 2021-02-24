@@ -44,3 +44,4 @@ nodenv init - | source
 ## Rust Lang (rustup)
 # export PATH="$HOME/.cargo/bin:$PATH
 
+xmodmap -e "keycode 105 = Shift_L NoSymbol Shift_L"
