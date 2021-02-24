@@ -67,6 +67,9 @@ endif
 " fugitive.vim: A Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 
+" Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers.
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " surround.vim: quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'
 
