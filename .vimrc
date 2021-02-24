@@ -125,6 +125,9 @@ Plug 'tpope/vim-eunuch'
 " The undo history visualizer for VIM
 Plug 'mbbill/undotree'
 
+" Plugin highlighting word under cursor and all of its occurences
+Plug 'dominikduda/vim_current_word'
+
 call plug#end()
 "" End of vim-plug manager setup
 
