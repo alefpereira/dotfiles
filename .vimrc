@@ -137,6 +137,9 @@ colorscheme wombat256mod
 " Column lines color
 highlight ColorColumn ctermbg=238
 
+" CursorLineLn white foreground and grey background
+highlight CursorLineNr ctermbg=236 ctermfg=248
+
 "" Keymaps
 " Esc Remaps
 inoremap jk <Esc>
