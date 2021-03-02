@@ -149,22 +149,8 @@ highlight CursorLineNr ctermbg=236 ctermfg=248
 " Esc Remaps
 inoremap jk <Esc>
 
-" " Ctrl Backspace remap to delete word backward
-" inoremap <C-BS> <C-W>
-" " Workaround to ctrl backspace delete word backward to work
-" noremap! <C-BS> <C-w>
-" noremap! <C-h> <C-w>
-
 " Ctrl-J to brake line in Normal Mode
 nnoremap <NL> i<CR><ESC>
-
-" Move line(s) Alt-J (down) and Alt-K (up)
-" nnoremap <A-j> :m .+1<CR>==
-" nnoremap <A-k> :m .-2<CR>==
-" " inoremap <A-j> <Esc>:m .+1<CR>==gi
-" " inoremap <A-k> <Esc>:m .-2<CR>==gi
-" vnoremap <A-j> :m '>+1<CR>gv=gv
-" vnoremap <A-k> :m '<-2<CR>gv=gv
 
 " FZF Fuzzy ctrlP setup
 nnoremap <C-P> :Files<CR>
@@ -214,16 +200,10 @@ hi IndentGuidesOdd ctermbg=235
 let g:airline_powerline_fonts = 1
 
 "" gitgutter configs
-" let g:gitgutter_set_sign_backgrounds = 1
 highlight! link SignColumn LineNr
-" highlight SignColumn guibg=NONE ctermbg=NONE
 highlight GitGutterAdd    guifg=green ctermfg=2 ctermbg=2
 highlight GitGutterChange guifg=blue ctermfg=4 ctermbg=4
 highlight GitGutterDelete guifg=red ctermfg=9 ctermbg=9
-" let g:gitgutter_highlight_linenrs = 1
-" highlight GitGutterAddLineNr ctermfg=10 ctermbg=232
-" highlight GitGutterChangeLineNr ctermfg=4 ctermbg=232
-" highlight GitGutterDeleteLineNr ctermfg=9 ctermbg=232
 
 " visual-at from: https://github.com/stoeffel/.dotfiles/blob/master/vim/visual-at.vim
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
