@@ -77,7 +77,10 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
 " A tree explorer plugin for vim.
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
+
+" Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify, etc
+Plug 'ryanoasis/vim-devicons'
 
 " A Vim plugin which shows a git diff in the sign column. It shows which lines have been added, modified, or removed.
 Plug 'airblade/vim-gitgutter'
@@ -227,3 +230,7 @@ function! ExecuteMacroOverVisualRange()
   echo "@".getcmdline()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
+
+"" NERDTree
+" NerdTree always shows hidden files
+let NERDTreeShowHidden=1
