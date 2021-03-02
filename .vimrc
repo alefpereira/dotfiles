@@ -35,6 +35,7 @@ set noswapfile
 set nobackup
 set undodir=~/.undodir
 set undofile
+set hidden
 " Set leader to space
 let mapleader = " "
 
