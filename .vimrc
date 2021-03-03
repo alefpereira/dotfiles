@@ -188,6 +188,17 @@ xnoremap <leader>p "+p
 nnoremap <leader>d "_d
 xnoremap <leader>d "_d
 
+" Undotree
+nnoremap <silent> <leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
+
+" NERDTree
+nnoremap <silent> <leader>e :NERDTreeToggle<CR>
+
+"" fzf.vim
+nnoremap <silent> <leader>f :Ag<CR>
+nnoremap <silent> <leader>g :GF?<CR>
+nnoremap <silent> <leader>b :Bu<CR>
+
 "" End of Keymaps
 
 "" Indent Guides config
