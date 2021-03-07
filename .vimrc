@@ -199,6 +199,17 @@ nnoremap <silent> <leader>f :Ag<CR>
 nnoremap <leader>g :GitFiles?<CR>
 nnoremap <silent> <leader>b :Bu<CR>
 
+"" coc.nvim keymaps
+nmap <F2> <Plug>(coc-rename)
+nmap <silent> gd <Plug>(coc-definition)
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
 "" End of Keymaps
 
 "" Indent Guides config
