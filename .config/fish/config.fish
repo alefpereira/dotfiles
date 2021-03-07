@@ -15,8 +15,6 @@ set -g __fish_git_prompt_color_dirtystate cyan
 set -g __fish_git_prompt_color_untrackedfiles white
 
 ## Setup neovim
-# Use Neovim as "prefered editor"
-set -g VISUAL nvim
 # Use Neovim instead of Vim or Vi (Check funtions aliases)
 #  ~/.config/fish/functions/vim.fish
 #  ~/.config/fish/functions/vi.fish
