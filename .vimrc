@@ -196,7 +196,7 @@ nnoremap <silent> <leader>e :NERDTreeToggle<CR>
 
 "" fzf.vim
 nnoremap <silent> <leader>f :Ag<CR>
-nnoremap <silent> <leader>g :GF?<CR>
+nnoremap <leader>g :GitFiles?<CR>
 nnoremap <silent> <leader>b :Bu<CR>
 
 "" End of Keymaps
