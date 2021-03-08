@@ -121,9 +121,6 @@ Plug 'tpope/vim-obsession'
 " surround.vim: quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'
 
-" sensible.vim: Defaults everyone can agree on
-" Plug 'tpope/vim-sensible'
-
 " eunuch.vim: Helpers for UNIX
 Plug 'tpope/vim-eunuch'
 
