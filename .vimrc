@@ -184,7 +184,7 @@ nnoremap <leader>d "_d
 xnoremap <leader>d "_d
 
 " Undotree
-nnoremap <silent> <leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
+nnoremap <leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
 " NERDTree
 nnoremap <silent> <leader>e :NERDTreeToggle<CR>
