@@ -27,8 +27,6 @@ set hlsearch
 set incsearch
 " Set update time so gitgutter updates faster
 set updatetime=100
-" Set mouse support (Modes: Normal, Visual, Insert)
-set mouse+=nvi
 " Set screen to scroll following cursor offset
 set scrolloff=8
 " Setup persistent undo history
