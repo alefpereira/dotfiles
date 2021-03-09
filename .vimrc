@@ -66,24 +66,34 @@ else
     call plug#begin('~/.vim/plugged')
 endif
 
-" fugitive.vim: A Git wrapper so awesome, it should be illegal
-Plug 'tpope/vim-fugitive'
+"" Main functionalities
+" fzf :heart: vim
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers.
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" surround.vim: quoting/parenthesizing made simple
-Plug 'tpope/vim-surround'
-
-" commentary.vim: comment stuff out
-Plug 'tpope/vim-commentary'
-
 " A tree explorer plugin for vim.
 Plug 'preservim/nerdtree'
 
-" Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify, etc
-Plug 'ryanoasis/vim-devicons'
+" The undo history visualizer for VIM
+Plug 'mbbill/undotree'
 
+" Jump to any definition and references IDE madness without overhead
+Plug 'pechorin/any-jump.vim'
+
+"" Main code display
+" A Vim plugin for visually displaying indent levels in code
+Plug 'nathanaelkane/vim-indent-guides'
+
+" Better trailing whitespace highlighting for Vim
+Plug 'ntpeters/vim-better-whitespace'
+
+" Plugin highlighting word under cursor and all of its occurences
+Plug 'dominikduda/vim_current_word'
+
+"" Main interface
 " A Vim plugin which shows a git diff in the sign column. It shows which lines have been added, modified, or removed.
 Plug 'airblade/vim-gitgutter'
 
@@ -93,48 +103,37 @@ Plug 'vim-airline/vim-airline'
 " A collection of themes for vim-airline
 Plug 'vim-airline/vim-airline-themes'
 
-" fzf :heart: vim
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
-" A Vim plugin for visually displaying indent levels in code
-Plug 'nathanaelkane/vim-indent-guides'
-
 " one colorscheme pack to rule them all!
 Plug 'flazz/vim-colorschemes'
 
-" A simple, easy-to-use Vim alignment plugin.
-Plug 'junegunn/vim-easy-align'
+" Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify, etc
+Plug 'ryanoasis/vim-devicons'
 
-" Markdown Vim Mode
-Plug 'plasticboy/vim-markdown'
+"" Other functionalities
+" fugitive.vim: A Git wrapper so awesome, it should be illegal
+Plug 'tpope/vim-fugitive'
 
-" Better trailing whitespace highlighting for Vim
-Plug 'ntpeters/vim-better-whitespace'
+" A git commit browser in Vim
+Plug 'junegunn/gv.vim'
 
-" commentary.vim: comment stuff out Tim Pope
+" eunuch.vim: Helpers for UNIX
+Plug 'tpope/vim-eunuch'
+
+"" Other plugins
+" surround.vim: quoting/parenthesizing made simple
+Plug 'tpope/vim-surround'
+
+" commentary.vim: comment stuff out
 Plug 'tpope/vim-commentary'
 
 " obsession.vim: continuously updated session files
 Plug 'tpope/vim-obsession'
 
-" surround.vim: quoting/parenthesizing made simple
-Plug 'tpope/vim-surround'
+" Markdown Vim Mode
+Plug 'plasticboy/vim-markdown'
 
-" eunuch.vim: Helpers for UNIX
-Plug 'tpope/vim-eunuch'
-
-" The undo history visualizer for VIM
-Plug 'mbbill/undotree'
-
-" Plugin highlighting word under cursor and all of its occurences
-Plug 'dominikduda/vim_current_word'
-
-" Jump to any definition and references IDE madness without overhead
-Plug 'pechorin/any-jump.vim'
-
-" A git commit browser in Vim
-Plug 'junegunn/gv.vim'
+" A simple, easy-to-use Vim alignment plugin.
+Plug 'junegunn/vim-easy-align'
 
 call plug#end()
 "" End of vim-plug manager setup
