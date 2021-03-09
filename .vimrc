@@ -133,6 +133,9 @@ Plug 'dominikduda/vim_current_word'
 " Jump to any definition and references IDE madness without overhead
 Plug 'pechorin/any-jump.vim'
 
+" A git commit browser in Vim
+Plug 'junegunn/gv.vim'
+
 call plug#end()
 "" End of vim-plug manager setup
 
