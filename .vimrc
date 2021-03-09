@@ -130,6 +130,9 @@ Plug 'mbbill/undotree'
 " Plugin highlighting word under cursor and all of its occurences
 Plug 'dominikduda/vim_current_word'
 
+" Jump to any definition and references IDE madness without overhead
+Plug 'pechorin/any-jump.vim'
+
 call plug#end()
 "" End of vim-plug manager setup
 
@@ -208,6 +211,9 @@ if has('nvim')
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
+
+" AnyJump keymaps
+nnoremap <leader>i :AnyJump<CR>
 
 "" End of Keymaps
 
