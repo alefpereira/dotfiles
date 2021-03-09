@@ -190,9 +190,13 @@ nnoremap <leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 nnoremap <silent> <leader>e :NERDTreeToggle<CR>
 
 "" fzf.vim
-nnoremap <silent> <leader>f :Ag<CR>
 nnoremap <leader>g :GitFiles?<CR>
 nnoremap <silent> <leader>b :Bu<CR>
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \ "rg --column --line-number --hidden --glob '!.git' --no-heading --color=always --smart-case ".shellescape(<q-args>), 1,
+  \ fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
+nnoremap <silent> <leader>f :Rg<CR>
 
 "" coc.nvim keymaps
 nmap <F2> <Plug>(coc-rename)
