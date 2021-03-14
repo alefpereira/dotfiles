@@ -67,6 +67,13 @@ else
 endif
 
 "" Main functionalities
+" Find, Filter, Preview, Pick. All lua, all the time.
+if has('nvim-0.0.5')
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+endif
+
 " Quickstart configurations for the Nvim LSP client
 if has('nvim-0.0.5')
     Plug 'neovim/nvim-lspconfig'
