@@ -67,6 +67,11 @@ else
 endif
 
 "" Main functionalities
+" Quickstart configurations for the Nvim LSP client
+if has('nvim-0.0.5')
+    Plug 'neovim/nvim-lspconfig'
+endif
+
 " fzf :heart: vim
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
