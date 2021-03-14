@@ -27,9 +27,6 @@ set -g __fish_git_prompt_color_untrackedfiles white
 pyenv init - | source
 pyenv virtualenv-init - | source
 
-### Nodenv
-nodenv init - | source
-
 
 ### ~/.profile
 # Configurations below are better placed in ~/.profile instead of here,
