@@ -247,3 +247,6 @@ endfunction
 "" NERDTree
 " NerdTree always shows hidden files
 let NERDTreeShowHidden=1
+
+"" Virtualenv python3 provider
+let g:python3_host_prog = '/home/alef/.pyenv/versions/py3nvim/bin/python'
