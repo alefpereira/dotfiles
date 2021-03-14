@@ -1,6 +1,4 @@
-if !exists('g:vscode')
-    " Load config from ~/.vimrc
-    set runtimepath^=~/.vim runtimepath+=~/.vim/after
-    let &packpath=&runtimepath
-    source ~/.vimrc
-endif
+" Load config from ~/.vimrc
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath=&runtimepath
+source ~/.vimrc
