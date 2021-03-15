@@ -207,7 +207,7 @@ nnoremap <leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 nnoremap <silent> <leader>e :NERDTreeToggle<CR>
 
 "" fzf.vim
-nnoremap <leader>g :GitFiles?<CR>
+nnoremap <leader>g :Git<CR>
 nnoremap <silent> <leader>b :Bu<CR>
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
