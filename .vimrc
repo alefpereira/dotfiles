@@ -200,6 +200,13 @@ xnoremap <leader>p "+p
 nnoremap <leader>d "_d
 xnoremap <leader>d "_d
 
+" Window navigation management
+nnoremap <leader>q <c-w>q
+nnoremap <leader>h <c-w>h
+nnoremap <leader>j <c-w>j
+nnoremap <leader>k <c-w>k
+nnoremap <leader>l <c-w>l
+
 " Undotree
 nnoremap <leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
