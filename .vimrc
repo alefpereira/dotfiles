@@ -79,6 +79,9 @@ if has('nvim-0.0.5')
     Plug 'neovim/nvim-lspconfig'
 endif
 
+" fugitive.vim: A Git wrapper so awesome, it should be illegal
+Plug 'tpope/vim-fugitive'
+
 " fzf :heart: vim
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -122,9 +125,6 @@ Plug 'flazz/vim-colorschemes'
 Plug 'ryanoasis/vim-devicons'
 
 "" Other functionalities
-" fugitive.vim: A Git wrapper so awesome, it should be illegal
-Plug 'tpope/vim-fugitive'
-
 " A git commit browser in Vim
 Plug 'junegunn/gv.vim'
 
