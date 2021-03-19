@@ -105,6 +105,9 @@ Plug 'ntpeters/vim-better-whitespace'
 " Plugin highlighting word under cursor and all of its occurences
 Plug 'dominikduda/vim_current_word'
 
+" Maximizes and restores the current window in Vim.
+Plug 'szw/vim-maximizer'
+
 "" Main interface
 " A Vim plugin which shows a git diff in the sign column. It shows which lines have been added, modified, or removed.
 Plug 'airblade/vim-gitgutter'
@@ -263,3 +266,6 @@ let NERDTreeShowHidden=1
 
 "" Virtualenv python3 provider
 let g:python3_host_prog = '/home/alef/.pyenv/versions/py3nvim/bin/python'
+
+"" Set maximizer default keymaps
+let g:maximizer_set_default_mapping = 1
