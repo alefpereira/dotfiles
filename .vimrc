@@ -142,7 +142,7 @@ Plug 'tpope/vim-obsession'
 Plug 'plasticboy/vim-markdown'
 
 " A simple, easy-to-use Vim alignment plugin.
-Plug 'junegunn/vim-easy-align'
+" Plug 'junegunn/vim-easy-align'
 
 call plug#end()
 "" End of vim-plug manager setup
