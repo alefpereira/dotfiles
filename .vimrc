@@ -244,6 +244,7 @@ hi IndentGuidesOdd ctermbg=235
 let g:airline_powerline_fonts = 1
 
 "" gitgutter configs
+let g:gitgutter_map_keys = 0
 highlight! link SignColumn LineNr
 highlight GitGutterAdd    guifg=green ctermfg=2 ctermbg=2
 highlight GitGutterChange guifg=blue ctermfg=4 ctermbg=4
