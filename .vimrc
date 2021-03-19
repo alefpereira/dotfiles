@@ -95,9 +95,6 @@ Plug 'preservim/nerdtree'
 " The undo history visualizer for VIM
 Plug 'mbbill/undotree'
 
-" Jump to any definition and references IDE madness without overhead
-Plug 'pechorin/any-jump.vim'
-
 "" Main code display
 " A Vim plugin for visually displaying indent levels in code
 Plug 'nathanaelkane/vim-indent-guides'
@@ -232,9 +229,6 @@ if has('nvim')
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
-
-" AnyJump keymaps
-nnoremap <leader>i :AnyJump<CR>
 
 "" End of Keymaps
 
