@@ -67,6 +67,9 @@ else
 endif
 
 "" Main functionalities
+" fugitive.vim: A Git wrapper so awesome, it should be illegal
+Plug 'tpope/vim-fugitive'
+
 " Find, Filter, Preview, Pick. All lua, all the time.
 if has('nvim-0.0.5')
     Plug 'nvim-lua/popup.nvim'
@@ -79,9 +82,6 @@ if has('nvim-0.0.5')
     Plug 'neovim/nvim-lspconfig'
 endif
 
-" fugitive.vim: A Git wrapper so awesome, it should be illegal
-Plug 'tpope/vim-fugitive'
-
 " fzf :heart: vim
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -89,11 +89,11 @@ Plug 'junegunn/fzf.vim'
 " Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers.
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" A tree explorer plugin for vim.
-Plug 'preservim/nerdtree'
-
 " The undo history visualizer for VIM
 Plug 'mbbill/undotree'
+
+" A tree explorer plugin for vim.
+Plug 'preservim/nerdtree'
 
 "" Main code display
 " A Vim plugin for visually displaying indent levels in code
@@ -104,9 +104,6 @@ Plug 'ntpeters/vim-better-whitespace'
 
 " Plugin highlighting word under cursor and all of its occurences
 Plug 'dominikduda/vim_current_word'
-
-" Maximizes and restores the current window in Vim.
-Plug 'szw/vim-maximizer'
 
 "" Main interface
 " A Vim plugin which shows a git diff in the sign column. It shows which lines have been added, modified, or removed.
@@ -125,6 +122,9 @@ Plug 'flazz/vim-colorschemes'
 Plug 'ryanoasis/vim-devicons'
 
 "" Other functionalities
+" Maximizes and restores the current window in Vim.
+Plug 'szw/vim-maximizer'
+
 " eunuch.vim: Helpers for UNIX
 Plug 'tpope/vim-eunuch'
 
