@@ -125,9 +125,6 @@ Plug 'flazz/vim-colorschemes'
 Plug 'ryanoasis/vim-devicons'
 
 "" Other functionalities
-" A git commit browser in Vim
-Plug 'junegunn/gv.vim'
-
 " eunuch.vim: Helpers for UNIX
 Plug 'tpope/vim-eunuch'
 
