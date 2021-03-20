@@ -9,6 +9,7 @@ local nvim_lsp = require('lspconfig')
 
 local servers = {
     "pyright",
+    "tsserver",
 }
 
 for _, lsp in ipairs(servers) do
