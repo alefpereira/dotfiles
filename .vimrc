@@ -267,3 +267,7 @@ let g:python3_host_prog = '/home/alef/.pyenv/versions/py3nvim/bin/python'
 
 "" Set maximizer default keymaps
 let g:maximizer_set_default_mapping = 1
+
+"" vim-markdown
+" Disable auto folding
+let g:vim_markdown_folding_disabled = 1
