@@ -39,6 +39,8 @@ set hidden
 set nowrap
 " Set leader to space
 let mapleader = " "
+"" Let vim to highlight embeded code: Lua, Python
+let g:vimsyn_embed='lP'
 
 " Install vim-plug if not found (neovim specifc)
 if has('nvim')
