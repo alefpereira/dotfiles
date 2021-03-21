@@ -186,6 +186,8 @@ nnoremap <leader>Y gg"+yG
 " Paste from system clipboard with leader key.
 nnoremap <leader>p "+p
 xnoremap <leader>p "+p
+nnoremap <leader>P "+P
+xnoremap <leader>P "+P
 
 " Delete to blackhole
 nnoremap <leader>d "_d
