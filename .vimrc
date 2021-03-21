@@ -84,10 +84,6 @@ if has('nvim-0.0.5')
     Plug 'neovim/nvim-lspconfig'
 endif
 
-" fzf :heart: vim
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
 " Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers.
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -165,10 +161,6 @@ inoremap jk <Esc>
 " Ctrl-J to brake line in Normal Mode
 nnoremap <NL> i<CR><ESC>
 
-" FZF Fuzzy ctrlP setup
-nnoremap <C-P> :Files<CR>
-" nnoremap <C-P> :FZF<CR>
-
 " Map ç to behave like : (commands). Improve abnt2 keyboard usability for vim.
 nnoremap ç :
 xnoremap ç :
@@ -206,20 +198,32 @@ nnoremap <leader>j <c-w>j
 nnoremap <leader>k <c-w>k
 nnoremap <leader>l <c-w>l
 
+"" Telescope (telescope.nvim)
+nnoremap <C-P> <cmd>Telescope find_files
+    \ find_command=fd,--type,f,--hidden,--exclude,.git<cr>
+nnoremap <silent> <leader>b <cmd>Telescope buffers<CR>
+nnoremap <leader>f <cmd>lua require('telescope.builtin').live_grep
+    \ {vimgrep_arguments={
+    \   'rg',
+    \   '--color=never',
+    \   '--no-heading',
+    \   '--hidden',
+    \   '--with-filename',
+    \   '--line-number',
+    \   '--column',
+    \   '--smart-case',
+    \   '--glob',
+    \   '!.git'
+    \ }}<cr>
+
+"" Vim Fugitive (vim-fugitive)
+nnoremap <leader>g :vert Git<CR>
+
 " Undotree
 nnoremap <leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
 " NERDTree
 nnoremap <silent> <leader>e :NERDTreeToggle<CR>
-
-"" fzf.vim
-nnoremap <leader>g :vert Git<CR>
-nnoremap <silent> <leader>b :Bu<CR>
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \ "rg --column --line-number --hidden --glob '!.git' --no-heading --color=always --smart-case ".shellescape(<q-args>), 1,
-  \ fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
-nnoremap <silent> <leader>f :Rg<CR>
 
 "" coc.nvim keymaps
 nmap <F2> <Plug>(coc-rename)
