@@ -72,11 +72,15 @@ endif
 " fugitive.vim: A Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 
-" Find, Filter, Preview, Pick. All lua, all the time.
 if has('nvim-0.0.5')
+    " Find, Filter, Preview, Pick. All lua, all the time.
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
+else
+    " fzf :heart: vim
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'junegunn/fzf.vim'
 endif
 
 " Quickstart configurations for the Nvim LSP client
@@ -200,23 +204,34 @@ nnoremap <leader>j <c-w>j
 nnoremap <leader>k <c-w>k
 nnoremap <leader>l <c-w>l
 
-"" Telescope (telescope.nvim)
-nnoremap <C-P> <cmd>Telescope find_files
-    \ find_command=fd,--type,f,--hidden,--exclude,.git<cr>
-nnoremap <silent> <leader>b <cmd>Telescope buffers<CR>
-nnoremap <leader>f <cmd>lua require('telescope.builtin').live_grep
-    \ {vimgrep_arguments={
-    \   'rg',
-    \   '--color=never',
-    \   '--no-heading',
-    \   '--hidden',
-    \   '--with-filename',
-    \   '--line-number',
-    \   '--column',
-    \   '--smart-case',
-    \   '--glob',
-    \   '!.git'
-    \ }}<cr>
+if has('nvim-0.0.5')
+    "" Telescope (telescope.nvim)
+    nnoremap <C-P> <cmd>Telescope find_files
+        \ find_command=fd,--type,f,--hidden,--exclude,.git<cr>
+    nnoremap <silent> <leader>b <cmd>Telescope buffers<CR>
+    nnoremap <leader>f <cmd>lua require('telescope.builtin').live_grep
+        \ {vimgrep_arguments={
+        \   'rg',
+        \   '--color=never',
+        \   '--no-heading',
+        \   '--hidden',
+        \   '--with-filename',
+        \   '--line-number',
+        \   '--column',
+        \   '--smart-case',
+        \   '--glob',
+        \   '!.git'
+        \ }}<cr>
+else
+    "" fzf.vim
+    nnoremap <C-P> :Files<CR>
+    nnoremap <silent> <leader>b :Bu<CR>
+    command! -bang -nargs=* Rg
+      \ call fzf#vim#grep(
+      \ "rg --column --line-number --hidden --glob '!.git' --no-heading --color=always --smart-case ".shellescape(<q-args>), 1,
+      \ fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
+    nnoremap <silent> <leader>f :Rg<CR>
+endif
 
 "" Vim Fugitive (vim-fugitive)
 nnoremap <leader>g :vert Git<CR>

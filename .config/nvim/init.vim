@@ -3,6 +3,7 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
 source ~/.vimrc
 
+if has('nvim-0.0.5')
 " Setup Pyright
 lua << EOF
 local nvim_lsp = require('lspconfig')
@@ -32,3 +33,4 @@ require('telescope').setup{
     }
 }
 EOF
+endif
