@@ -21,6 +21,8 @@ set colorcolumn=80,100
 set wildmenu
 " Always show the command in the status line
 set showcmd
+" Hide native mode indicator
+set noshowmode
 " Highlight search results
 set hlsearch
 " Search as you type
