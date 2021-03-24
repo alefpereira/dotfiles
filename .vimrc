@@ -156,7 +156,8 @@ call plug#end()
 
 "" Colors
 " Terminal Color Scheme
-colorscheme wombat256mod
+colorscheme gruvbox
+
 " Column lines color
 highlight ColorColumn ctermbg=238
 
@@ -268,6 +269,8 @@ hi IndentGuidesEven ctermbg=235
 hi IndentGuidesOdd ctermbg=235
 
 "" airline/powerline settings
+" airline theme
+let g:airline_theme='wombat'
 " fix font symbols
 let g:airline_powerline_fonts = 1
 
