@@ -110,6 +110,9 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'dominikduda/vim_current_word'
 
 "" Main interface
+" Vim python syntax
+Plug 'vim-python/python-syntax'
+
 " A Vim plugin which shows a git diff in the sign column. It shows which lines have been added, modified, or removed.
 Plug 'airblade/vim-gitgutter'
 
@@ -296,3 +299,6 @@ let g:maximizer_set_default_mapping = 1
 "" vim-markdown
 " Disable auto folding
 let g:vim_markdown_folding_disabled = 1
+
+"" Fixed python syntax
+let g:python_highlight_all = 1
