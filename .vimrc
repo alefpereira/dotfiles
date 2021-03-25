@@ -180,6 +180,9 @@ inoremap <A-ç> <Esc>:
 " Esc to clear search highlights
 nnoremap <Esc> :noh<Esc>
 
+" Y to behave like C and D
+nnoremap Y y$
+
 "" Lots of great mapings. Thanks to ThePrimeagen for the inspiration
 " Prevent paste to replace register in visual mode
 xnoremap p "_dP
