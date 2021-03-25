@@ -183,6 +183,15 @@ nnoremap <Esc> :noh<Esc>
 " Y to behave like C and D
 nnoremap Y y$
 
+" Auto close matching ([{<'"
+inoremap <silent> ( ()<Esc>i
+inoremap <silent> [ []<Esc>i
+inoremap <silent> { {}<Esc>i
+inoremap <silent> " ""<Esc>i
+inoremap <silent> ' ''<Esc>i
+inoremap <silent> < <><Esc>i
+inoremap <silent> <C-e> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+
 "" Lots of great mapings. Thanks to ThePrimeagen for the inspiration
 " Prevent paste to replace register in visual mode
 xnoremap p "_dP
