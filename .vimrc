@@ -100,8 +100,8 @@ Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
 
 "" Main code display
-" A Vim plugin for visually displaying indent levels in code
-Plug 'nathanaelkane/vim-indent-guides'
+" A vim plugin to display the indention levels with thin vertical lines
+Plug 'Yggdroot/indentLine'
 
 " Better trailing whitespace highlighting for Vim
 Plug 'ntpeters/vim-better-whitespace'
@@ -261,12 +261,9 @@ endif
 
 "" End of Keymaps
 
-"" Indent Guides config
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-hi IndentGuidesEven ctermbg=235
-hi IndentGuidesOdd ctermbg=235
+"" Indent Lines config
+let g:indentLine_color_term = 237
+let g:indentLine_char = '│'
 
 "" airline/powerline settings
 " airline theme
