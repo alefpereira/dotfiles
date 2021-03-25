@@ -166,7 +166,7 @@ highlight CursorLineNr ctermbg=236 ctermfg=248
 
 "" Keymaps
 " Esc Remaps
-inoremap jk <Esc>
+" inoremap jk <Esc>
 
 " Ctrl-J to brake line in Normal Mode
 nnoremap <NL> i<CR><ESC>
