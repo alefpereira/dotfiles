@@ -99,6 +99,9 @@ Plug 'mbbill/undotree'
 " A tree explorer plugin for vim.
 Plug 'preservim/nerdtree'
 
+" vimspector - A multi-language debugging system for Vim
+Plug 'puremourning/vimspector'
+
 "" Main code display
 " A vim plugin to display the indention levels with thin vertical lines
 Plug 'Yggdroot/indentLine'
