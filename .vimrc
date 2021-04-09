@@ -171,6 +171,10 @@ highlight CursorLineNr ctermbg=236 ctermfg=248
 " Esc Remaps
 " inoremap jk <Esc>
 
+" Ctrl-P and Ctrl-N to behave like arrow (partial search in command mode)
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
 " Ctrl-J to brake line in Normal Mode
 nnoremap <NL> i<CR><ESC>
 
