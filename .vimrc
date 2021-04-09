@@ -277,6 +277,9 @@ if has('nvim')
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
+" <cr> and <c-j> to behave like <c-y> in completion list
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <nl> pumvisible() ? "\<C-y>" : "\<C-g>u\<NL>"
 
 "" End of Keymaps
 
