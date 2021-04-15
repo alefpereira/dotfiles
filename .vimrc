@@ -90,8 +90,10 @@ if has('nvim-0.0.5')
     Plug 'neovim/nvim-lspconfig'
 endif
 
-" Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers.
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Auto completion plugin for nvim written in Lua
+if has('nvim-0.0.5')
+    Plug 'hrsh7th/nvim-compe'
+endif
 
 " The undo history visualizer for VIM
 Plug 'mbbill/undotree'
