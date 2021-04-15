@@ -268,16 +268,6 @@ nnoremap <leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 " NERDTree
 nnoremap <silent> <leader>e :NERDTreeToggle<CR>
 
-"" coc.nvim keymaps
-nmap <F2> <Plug>(coc-rename)
-nmap <silent> gd <Plug>(coc-definition)
-
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
 " <cr> and <c-j> to behave like <c-y> in completion list
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <expr> <nl> pumvisible() ? "\<C-y>" : "\<C-g>u\<NL>"
