@@ -314,6 +314,9 @@ let g:maximizer_set_default_mapping = 1
 "" vim-markdown
 " Disable auto folding
 let g:vim_markdown_folding_disabled = 1
+" Disable conceal
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0
 
 "" Fixed python syntax
 let g:python_highlight_all = 1
