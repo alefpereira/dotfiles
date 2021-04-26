@@ -39,6 +39,8 @@ set undofile
 set hidden
 " Set lines not to wrap
 set nowrap
+" Hide Pattern not found message from completion
+set shortmess+=c
 " Set leader to space
 let mapleader = " "
 "" Let vim to highlight embeded code: Lua, Python
