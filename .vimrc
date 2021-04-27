@@ -308,7 +308,9 @@ endfunction
 let NERDTreeShowHidden=1
 
 "" Virtualenv python3 provider
-let g:python3_host_prog = $PYENV_ROOT . '/versions/py3nvim/bin/python'
+if has('nvim')
+    let g:python3_host_prog = $PYENV_ROOT . '/versions/py3nvim/bin/python'
+endif
 
 "" Set maximizer default keymaps
 let g:maximizer_set_default_mapping = 1
