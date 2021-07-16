@@ -24,6 +24,7 @@ set -g __fish_git_prompt_color_untrackedfiles white
 ## Do not uncomment, this will lead to repeated .pyenv/bin in path leading to 'File name too long' error in sudo
 # set -Ux PYENV_ROOT $HOME/.pyenv
 # set -Ux fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+status is-login; and pyenv init --path | source
 status --is-interactive; and pyenv init - | source
 status --is-interactive; and pyenv virtualenv-init - | source
 
