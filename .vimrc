@@ -290,7 +290,7 @@ let g:indentLine_char = '│'
 
 "" airline/powerline settings
 " airline theme
-let g:airline_theme='wombat'
+let g:airline_theme='onedark'
 " fix font symbols
 let g:airline_powerline_fonts = 1
 
