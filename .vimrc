@@ -129,8 +129,14 @@ Plug 'vim-airline/vim-airline'
 " A collection of themes for vim-airline
 Plug 'vim-airline/vim-airline-themes'
 
-" one colorscheme pack to rule them all!
-Plug 'flazz/vim-colorschemes'
+" gruvbox colorscheme
+Plug 'morhetz/gruvbox'
+
+" VSCode (code) dark+ inspired colorscheme.
+Plug 'tomasiser/vim-code-dark'
+
+" onehalf colorscheme
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 " Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify, etc
 Plug 'ryanoasis/vim-devicons'
