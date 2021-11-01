@@ -1,7 +1,7 @@
 " Load config from ~/.vimrc
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath=&runtimepath
-source ~/.vimrc
+"set runtimepath^=~/.vim runtimepath+=~/.vim/after
+"let &packpath=&runtimepath
+"source ~/.vimrc
 
 " Set leader to space
 let mapleader = " "
@@ -9,17 +9,9 @@ let mapleader = " "
 let g:vimsyn_embed='lP'
 
 " Install vim-plug if not found (neovim specifc)
-if has('nvim')
-    if empty(glob(stdpath('data'). '/site/autoload/plug.vim'))
-      silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    endif
-else
-" Install vim-plug if not found (vim specifc)
-    if empty(glob('~/.vim/autoload/plug.vim'))
-      silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    endif
+if empty(glob(stdpath('data'). '/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
 
 " Run PlugInstall if there are missing plugins
@@ -28,36 +20,24 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 \| endif
 
 "" vim-plug manager setup
-if has('nvim')
-    call plug#begin(stdpath('data') . '/plugged')
-else
-    call plug#begin('~/.vim/plugged')
-endif
+call plug#begin(stdpath('data') . '/plugged')
 
 "" Main functionalities
 " fugitive.vim: A Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 
-if has('nvim')
-    " Find, Filter, Preview, Pick. All lua, all the time.
-    Plug 'nvim-lua/popup.nvim'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
-else
-    " fzf :heart: vim
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-    Plug 'junegunn/fzf.vim'
-endif
+" Find, Filter, Preview, Pick. All lua, all the time.
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Quickstart configurations for the Nvim LSP client
-if has('nvim')
-    Plug 'neovim/nvim-lspconfig'
-endif
+Plug 'neovim/nvim-lspconfig'
 
 " Auto completion plugin for nvim written in Lua
-if has('nvim')
-    Plug 'hrsh7th/nvim-compe'
-endif
+Plug 'hrsh7th/nvim-compe'
+"Plug 'glepnir/lspsaga.nvim'
+"Plug 'simrat39/symbols-outline.nvim'
 
 " The undo history visualizer for VIM
 Plug 'mbbill/undotree'
@@ -86,10 +66,10 @@ Plug 'vim-python/python-syntax'
 Plug 'airblade/vim-gitgutter'
 
 " lean & mean status/tabline for vim that's light as air
-" Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 
 " A collection of themes for vim-airline
-" Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes'
 
 " gruvbox colorscheme
 Plug 'morhetz/gruvbox'
@@ -101,7 +81,7 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 " Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify, etc
-" Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 "" Other functionalities
 " Maximizes and restores the current window in Vim.
@@ -128,16 +108,6 @@ Plug 'tpope/vim-obsession'
 
 call plug#end()
 "" End of vim-plug manager setup
-
-"" Colors
-" Terminal Color Scheme
-colorscheme gruvbox
-
-" Column lines color
-highlight ColorColumn ctermbg=238
-
-" CursorLineLn white foreground and grey background
-highlight CursorLineNr ctermbg=236 ctermfg=248
 
 "" Keymaps
 " Esc Remaps
@@ -201,36 +171,6 @@ nnoremap <leader>j <c-w>j
 nnoremap <leader>k <c-w>k
 nnoremap <leader>l <c-w>l
 
-if has('nvim')
-    "" Telescope (telescope.nvim)
-    nnoremap <C-P> <cmd>Telescope find_files
-        \ find_command=fd,--type,f,--hidden,--exclude,.git<cr>
-    nnoremap <silent> <leader>b <cmd>Telescope buffers
-        \ show_all_buffers='true'<CR>
-    nnoremap <leader>f <cmd>lua require('telescope.builtin').live_grep
-        \ {vimgrep_arguments={
-        \   'rg',
-        \   '--color=never',
-        \   '--no-heading',
-        \   '--hidden',
-        \   '--with-filename',
-        \   '--line-number',
-        \   '--column',
-        \   '--smart-case',
-        \   '--glob',
-        \   '!.git'
-        \ }}<cr>
-else
-    "" fzf.vim
-    nnoremap <C-P> :Files<CR>
-    nnoremap <silent> <leader>b :Bu<CR>
-    command! -bang -nargs=* Rg
-      \ call fzf#vim#grep(
-      \ "rg --column --line-number --hidden --glob '!.git' --no-heading --color=always --smart-case ".shellescape(<q-args>), 1,
-      \ fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
-    nnoremap <silent> <leader>f :Rg<CR>
-endif
-
 "" Vim Fugitive (vim-fugitive)
 nnoremap <leader>g :vert Git<CR>
 
@@ -252,16 +192,13 @@ let g:indentLine_char = '│'
 
 "" airline/powerline settings
 " airline theme
-" let g:airline_theme='onedark'
+"let g:airline_theme='onedark'
+let g:airline_theme='wombat'
 " fix font symbols
-" let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 
 "" gitgutter configs
 let g:gitgutter_map_keys = 0
-highlight! link SignColumn LineNr
-highlight GitGutterAdd    guifg=green ctermfg=2 ctermbg=2
-highlight GitGutterChange guifg=blue ctermfg=4 ctermbg=4
-highlight GitGutterDelete guifg=red ctermfg=9 ctermbg=9
 
 " visual-at from: https://github.com/stoeffel/.dotfiles/blob/master/vim/visual-at.vim
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
@@ -276,9 +213,7 @@ endfunction
 " let NERDTreeShowHidden=1
 
 "" Virtualenv python3 provider
-if has('nvim')
-    let g:python3_host_prog = $PYENV_ROOT . '/versions/py3nvim/bin/python'
-endif
+let g:python3_host_prog = $PYENV_ROOT . '/versions/py3nvim/bin/python'
 
 "" Set maximizer default keymaps
 let g:maximizer_set_default_mapping = 1
@@ -293,7 +228,6 @@ let g:vim_markdown_conceal_code_blocks = 0
 "" Fixed python syntax
 let g:python_highlight_all = 1
 
-if has('nvim')
 " Setup Pyright
 lua << EOF
 local nvim_lsp = require('lspconfig')
@@ -399,4 +333,3 @@ require('telescope').setup{
     }
 }
 EOF
-endif
