@@ -203,11 +203,6 @@ let g:airline_powerline_fonts = 1
 
 "" gitgutter configs
 let g:gitgutter_map_keys = 0
-" highlight! link SignColumn LineNr
-" highlight GitGutterAdd    guifg=green ctermfg=2 ctermbg=2
-" highlight GitGutterChange guifg=blue ctermfg=4 ctermbg=4
-" highlight GitGutterDelete guifg=red ctermfg=9 ctermbg=9
-
 
 "" Execute macros over visual range
 " visual-at from: https://github.com/stoeffel/.dotfiles/blob/master/vim/visual-at.vim
