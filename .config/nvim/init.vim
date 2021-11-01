@@ -3,22 +3,6 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
 source ~/.vimrc
 
-" Highlight current line
-set cursorline
-" Highlight colums
-set colorcolumn=80,100
-" Hide native mode indicator
-set noshowmode
-" Set update time so gitgutter updates faster
-set updatetime=100
-" Setup persistent undo history
-set noswapfile
-set nobackup
-set undodir=~/.undodir
-set undofile
-set hidden
-" Hide Pattern not found message from completion
-set shortmess+=c
 " Set leader to space
 let mapleader = " "
 "" Let vim to highlight embeded code: Lua, Python
@@ -79,10 +63,10 @@ endif
 Plug 'mbbill/undotree'
 
 " A tree explorer plugin for vim.
-Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdtree'
 
 " vimspector - A multi-language debugging system for Vim
-Plug 'puremourning/vimspector'
+" Plug 'puremourning/vimspector'
 
 "" Main code display
 " A vim plugin to display the indention levels with thin vertical lines
@@ -102,10 +86,10 @@ Plug 'vim-python/python-syntax'
 Plug 'airblade/vim-gitgutter'
 
 " lean & mean status/tabline for vim that's light as air
-Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline'
 
 " A collection of themes for vim-airline
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline-themes'
 
 " gruvbox colorscheme
 Plug 'morhetz/gruvbox'
@@ -117,11 +101,11 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 " Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify, etc
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 
 "" Other functionalities
 " Maximizes and restores the current window in Vim.
-Plug 'szw/vim-maximizer'
+" Plug 'szw/vim-maximizer'
 
 " eunuch.vim: Helpers for UNIX
 Plug 'tpope/vim-eunuch'
@@ -137,7 +121,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-obsession'
 
 " Markdown Vim Mode
-Plug 'plasticboy/vim-markdown'
+" Plug 'plasticboy/vim-markdown'
 
 " A simple, easy-to-use Vim alignment plugin.
 " Plug 'junegunn/vim-easy-align'
@@ -254,7 +238,7 @@ nnoremap <leader>g :vert Git<CR>
 nnoremap <leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
 " NERDTree
-nnoremap <silent> <leader>e :NERDTreeToggle<CR>
+" nnoremap <silent> <leader>e :NERDTreeToggle<CR>
 
 " <cr> and <c-j> to behave like <c-y> in completion list
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
@@ -268,9 +252,9 @@ let g:indentLine_char = '│'
 
 "" airline/powerline settings
 " airline theme
-let g:airline_theme='onedark'
+" let g:airline_theme='onedark'
 " fix font symbols
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 
 "" gitgutter configs
 let g:gitgutter_map_keys = 0
@@ -289,7 +273,7 @@ endfunction
 
 "" NERDTree
 " NerdTree always shows hidden files
-let NERDTreeShowHidden=1
+" let NERDTreeShowHidden=1
 
 "" Virtualenv python3 provider
 if has('nvim')
