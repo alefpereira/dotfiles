@@ -3,11 +3,7 @@
 "let &packpath=&runtimepath
 "source ~/.vimrc
 
-" Set leader to space
-let mapleader = " "
-"" Let vim to highlight embeded code: Lua, Python
-let g:vimsyn_embed='lP'
-
+" ====== vim-plug manager setup ======
 " Install vim-plug if not found (neovim specifc)
 if empty(glob(stdpath('data'). '/site/autoload/plug.vim'))
   silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
@@ -43,10 +39,10 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'mbbill/undotree'
 
 " A tree explorer plugin for vim.
-" Plug 'preservim/nerdtree'
+"Plug 'preservim/nerdtree'
 
 " vimspector - A multi-language debugging system for Vim
-" Plug 'puremourning/vimspector'
+"Plug 'puremourning/vimspector'
 
 "" Main code display
 " A vim plugin to display the indention levels with thin vertical lines
@@ -85,7 +81,7 @@ Plug 'ryanoasis/vim-devicons'
 
 "" Other functionalities
 " Maximizes and restores the current window in Vim.
-" Plug 'szw/vim-maximizer'
+"Plug 'szw/vim-maximizer'
 
 " eunuch.vim: Helpers for UNIX
 Plug 'tpope/vim-eunuch'
@@ -101,15 +97,23 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-obsession'
 
 " Markdown Vim Mode
-" Plug 'plasticboy/vim-markdown'
+"Plug 'plasticboy/vim-markdown'
 
 " A simple, easy-to-use Vim alignment plugin.
 " Plug 'junegunn/vim-easy-align'
 
 call plug#end()
-"" End of vim-plug manager setup
+" ====== End of vim-plug manager setup ======
 
-"" Keymaps
+" ====== Other settings ======
+"" Leader map
+" Set leader to space
+let mapleader = " "
+
+"" Let vim to highlight embeded code: Lua, Python
+let g:vimsyn_embed='lP'
+
+" ====== Keymaps ======
 " Esc Remaps
 " inoremap jk <Esc>
 
@@ -120,11 +124,12 @@ cnoremap <C-n> <Down>
 " Ctrl-J to brake line in Normal Mode
 nnoremap <NL> i<CR><ESC>
 
-" Map ç to behave like : (commands). Improve abnt2 keyboard usability for vim.
-nnoremap ç :
-xnoremap ç :
-nnoremap <A-ç> :
-inoremap <A-ç> <Esc>:
+"" Possible abnt2 keyboard usability improvements for vim.
+" Map ç to behave like ":" (colon) to enter command mode.
+"nnoremap ç :
+"xnoremap ç :
+"nnoremap <A-ç> :
+"inoremap <A-ç> <Esc>:
 
 " Esc to clear search highlights
 nnoremap <Esc> :noh<Esc>
@@ -178,13 +183,13 @@ nnoremap <leader>g :vert Git<CR>
 nnoremap <leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
 " NERDTree
-" nnoremap <silent> <leader>e :NERDTreeToggle<CR>
+"nnoremap <silent> <leader>e :NERDTreeToggle<CR>
 
 " <cr> and <c-j> to behave like <c-y> in completion list
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <expr> <nl> pumvisible() ? "\<C-y>" : "\<C-g>u\<NL>"
 
-"" End of Keymaps
+" ====== End of Keymaps ======
 
 "" Indent Lines config
 let g:indentLine_color_term = 237
@@ -192,14 +197,19 @@ let g:indentLine_char = '│'
 
 "" airline/powerline settings
 " airline theme
-"let g:airline_theme='onedark'
-let g:airline_theme='wombat'
+let g:airline_theme='onedark'
 " fix font symbols
 let g:airline_powerline_fonts = 1
 
 "" gitgutter configs
 let g:gitgutter_map_keys = 0
+" highlight! link SignColumn LineNr
+" highlight GitGutterAdd    guifg=green ctermfg=2 ctermbg=2
+" highlight GitGutterChange guifg=blue ctermfg=4 ctermbg=4
+" highlight GitGutterDelete guifg=red ctermfg=9 ctermbg=9
 
+
+"" Execute macros over visual range
 " visual-at from: https://github.com/stoeffel/.dotfiles/blob/master/vim/visual-at.vim
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
@@ -210,24 +220,25 @@ endfunction
 
 "" NERDTree
 " NerdTree always shows hidden files
-" let NERDTreeShowHidden=1
+"let NERDTreeShowHidden=1
 
 "" Virtualenv python3 provider
 let g:python3_host_prog = $PYENV_ROOT . '/versions/py3nvim/bin/python'
 
 "" Set maximizer default keymaps
-let g:maximizer_set_default_mapping = 1
+"let g:maximizer_set_default_mapping = 1
 
 "" vim-markdown
 " Disable auto folding
-let g:vim_markdown_folding_disabled = 1
+"let g:vim_markdown_folding_disabled = 1
 " Disable conceal
-let g:vim_markdown_conceal = 0
-let g:vim_markdown_conceal_code_blocks = 0
+"let g:vim_markdown_conceal = 0
+"let g:vim_markdown_conceal_code_blocks = 0
 
 "" Fixed python syntax
 let g:python_highlight_all = 1
 
+" ====== Lua settings ======
 " Setup Pyright
 lua << EOF
 local nvim_lsp = require('lspconfig')
@@ -333,3 +344,4 @@ require('telescope').setup{
     }
 }
 EOF
+" ====== End of Lua settings ======

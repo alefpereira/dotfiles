@@ -1,8 +1,10 @@
-" Minimal (but really valuable) settings
+"" Minimal (but really valuable) settings
 " Show line numbers
 set number
 " Enable syntax
-syntax on
+" (enable/uncomment here can cause weird behaviour in colors as vim-plug
+" also enables it)
+"syntax on
 " Enable filetype detection, pluins and indentation
 filetype plugin indent on
 " Always display the status bar
