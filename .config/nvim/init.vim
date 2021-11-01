@@ -38,7 +38,7 @@ endif
 " fugitive.vim: A Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 
-if has('nvim-0.0.5')
+if has('nvim')
     " Find, Filter, Preview, Pick. All lua, all the time.
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
@@ -50,12 +50,12 @@ else
 endif
 
 " Quickstart configurations for the Nvim LSP client
-if has('nvim-0.0.5')
+if has('nvim')
     Plug 'neovim/nvim-lspconfig'
 endif
 
 " Auto completion plugin for nvim written in Lua
-if has('nvim-0.0.5')
+if has('nvim')
     Plug 'hrsh7th/nvim-compe'
 endif
 
@@ -201,7 +201,7 @@ nnoremap <leader>j <c-w>j
 nnoremap <leader>k <c-w>k
 nnoremap <leader>l <c-w>l
 
-if has('nvim-0.0.5')
+if has('nvim')
     "" Telescope (telescope.nvim)
     nnoremap <C-P> <cmd>Telescope find_files
         \ find_command=fd,--type,f,--hidden,--exclude,.git<cr>
@@ -293,7 +293,7 @@ let g:vim_markdown_conceal_code_blocks = 0
 "" Fixed python syntax
 let g:python_highlight_all = 1
 
-if has('nvim-0.0.5')
+if has('nvim')
 " Setup Pyright
 lua << EOF
 local nvim_lsp = require('lspconfig')
