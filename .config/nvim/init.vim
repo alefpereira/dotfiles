@@ -238,6 +238,31 @@ let g:python_highlight_all = 1
 lua << EOF
 local nvim_lsp = require('lspconfig')
 
+-- Setup language servers
+local servers = {
+    "pyright",
+    "tsserver",
+}
+
+for _, lsp in ipairs(servers) do
+    nvim_lsp[lsp].setup{ on_attach = on_attach }
+end
+-- End of language server setup
+
+local actions = require('telescope.actions')
+require('telescope').setup{
+    defaults = {
+        mappings = {
+            i = {
+                ["<C-j>"]= actions.select_default,
+            },
+            n = {
+                ["<C-j>"]= actions.select_default,
+            }
+        }
+    }
+}
+
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -286,17 +311,6 @@ local on_attach = function(client, bufnr)
   end
 end
 
--- Setup language servers
-local servers = {
-    "pyright",
-    "tsserver",
-}
-
-for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup{ on_attach = on_attach }
-end
--- End of language server setup
-
 -- nvim-compe setup
 vim.o.completeopt = "menuone,noselect"
 vim.o.pumheight = 15
@@ -323,20 +337,6 @@ require'compe'.setup {
     nvim_lua = true;
     vsnip = true;
   };
-}
-
-local actions = require('telescope.actions')
-require('telescope').setup{
-    defaults = {
-        mappings = {
-            i = {
-                ["<C-j>"]= actions.select_default,
-            },
-            n = {
-                ["<C-j>"]= actions.select_default,
-            }
-        }
-    }
 }
 EOF
 " ====== End of Lua settings ======

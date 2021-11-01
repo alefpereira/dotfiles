@@ -2,7 +2,7 @@
 nnoremap <C-P> <cmd>Telescope find_files
     \ find_command=fd,--type,f,--hidden,--exclude,.git<cr>
 nnoremap <silent> <leader>b <cmd>Telescope buffers
-    \ show_all_buffers='true'<CR>
+    \ show_all_buffers='true' sort_lastused='true'<CR>
 nnoremap <leader>f <cmd>lua require('telescope.builtin').live_grep
     \ {vimgrep_arguments={
     \   'rg',
