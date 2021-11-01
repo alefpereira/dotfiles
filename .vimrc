@@ -1,4 +1,4 @@
-" Minimal (but really valuable) settings
+"" Minimal (but really valuable) settings
 " Show line numbers
 set number
 " Enable syntax
@@ -20,7 +20,7 @@ set wildmenu
 " Set screen to scroll following cursor offset
 set scrolloff=8
 
-" Personal choices
+"" Personal choices
 " Set lines not to wrap
 set nowrap
 " Show line relative numbers instead of usual sequential numbers
@@ -32,3 +32,28 @@ set softtabstop=-1
 set shiftwidth=0
 " On pressing tab, insert 4 spaces
 set expandtab
+
+"" Plugins
+" Install vim-plug if not found (vim specifc)
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
+"" vim-plug manager setup
+call plug#begin('~/.vim/plugged')
+
+" fzf :heart: vim
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
+"" End of vim-plug manager setup
+
+" Set leader to space
+let mapleader = " "
