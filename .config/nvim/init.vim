@@ -95,10 +95,10 @@ Plug 'tpope/vim-eunuch'
 
 "" Other plugins
 " surround.vim: quoting/parenthesizing made simple
-Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-surround'
 
 " commentary.vim: comment stuff out
-Plug 'tpope/vim-commentary'
+"Plug 'tpope/vim-commentary'
 
 " obsession.vim: continuously updated session files
 Plug 'tpope/vim-obsession'
