@@ -181,11 +181,11 @@ nnoremap <leader>d "_d
 xnoremap <leader>d "_d
 
 " Window navigation management
-nnoremap <leader>q <c-w>q
-nnoremap <leader>h <c-w>h
-nnoremap <leader>j <c-w>j
-nnoremap <leader>k <c-w>k
-nnoremap <leader>l <c-w>l
+"nnoremap <leader>q <c-w>q
+"nnoremap <leader>h <c-w>h
+"nnoremap <leader>j <c-w>j
+"nnoremap <leader>k <c-w>k
+"nnoremap <leader>l <c-w>l
 
 "" Vim Fugitive (vim-fugitive)
 nnoremap <leader>g :vert Git<CR>
