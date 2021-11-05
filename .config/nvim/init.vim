@@ -46,6 +46,9 @@ Plug 'L3MON4D3/LuaSnip'
 " The undo history visualizer for VIM
 Plug 'mbbill/undotree'
 
+" Nvim Treesitter configurations and abstraction layer
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 " A tree explorer plugin for vim.
 "Plug 'preservim/nerdtree'
 
