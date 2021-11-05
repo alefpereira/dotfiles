@@ -48,6 +48,9 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 "" vim-plug manager setup
 call plug#begin('~/.vim/plugged')
 
+" fugitive.vim: A Git wrapper so awesome, it should be illegal
+Plug 'tpope/vim-fugitive'
+
 " fzf :heart: vim
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -57,3 +60,6 @@ call plug#end()
 
 " Set leader to space
 let mapleader = " "
+
+"" Vim Fugitive (vim-fugitive)
+nnoremap <leader>g :vert Git<CR>
