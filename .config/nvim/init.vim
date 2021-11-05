@@ -241,5 +241,5 @@ let g:python3_host_prog = $PYENV_ROOT . '/versions/py3nvim/bin/python'
 let g:python_highlight_all = 1
 
 " ====== Lua settings ======
-lua require('alefpereira')
+lua require('alef')
 " ====== End of Lua settings ======
