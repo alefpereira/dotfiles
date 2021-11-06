@@ -30,3 +30,5 @@ eval "$(pyenv virtualenv-init -)"
 if [[ -n "`which luarocks 2>/dev/null`" ]]; then
     eval `luarocks path --bin`
 fi
+
+alias luamake=$HOME/Softwares/lua-language-server/3rd/luamake/luamake

@@ -73,6 +73,14 @@ configs.ls_emmet = {
   };
 }
 
+-- lua
+local sumneko_root_path = vim.env.HOME .. "/Softwares/lua-language-server"
+local sumneko_binary = sumneko_root_path .. "/bin/Linux/lua-language-server"
+
+local sumneko_config = {
+    cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" }
+}
+
 -- table of servers to setup {"<server-name>", <opts>}
 local servers = {
     {"pyright", {}},
@@ -82,6 +90,7 @@ local servers = {
     {"eslint", {}},
     {"jsonls", {}},
     {"html", {}},
+    {"sumneko_lua", sumneko_config},
 }
 
 -- setup each server
