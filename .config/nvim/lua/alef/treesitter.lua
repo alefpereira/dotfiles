@@ -9,6 +9,6 @@ require'nvim-treesitter.configs'.setup {
     enable = true
   },
   textobjects = {
-      enable = true
+    enable = true
   },
 }
