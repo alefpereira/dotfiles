@@ -59,11 +59,29 @@ end
 
 -- Setup Language Server Protocol
 local nvim_lsp = require('lspconfig')
+local configs = require'lspconfig/configs'
+
+-- ls_emmet configs
+configs.ls_emmet = {
+  default_config = {
+    cmd = { 'ls_emmet', '--stdio' };
+    filetypes = { 'html', 'css', 'scss', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' };
+    root_dir = function(fname)
+      return vim.loop.cwd()
+    end;
+    settings = {};
+  };
+}
 
 -- table of servers to setup {"<server-name>", <opts>}
 local servers = {
     {"pyright", {}},
     {"tsserver", {}},
+    {"cssls", {}},
+    {"ls_emmet", {}},
+    {"eslint", {}},
+    {"jsonls", {}},
+    {"html", {}},
 }
 
 -- setup each server
