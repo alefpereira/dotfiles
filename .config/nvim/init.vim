@@ -113,6 +113,9 @@ Plug 'tpope/vim-obsession'
 " A simple, easy-to-use Vim alignment plugin.
 " Plug 'junegunn/vim-easy-align'
 
+" EditorConfig plugin for Vim (Use for parsing .editorconfig files.)
+Plug 'editorconfig/editorconfig-vim'
+
 call plug#end()
 " ====== End of vim-plug manager setup ======
 
