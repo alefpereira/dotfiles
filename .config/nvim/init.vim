@@ -191,7 +191,7 @@ xnoremap <leader>d "_d
 "nnoremap <leader>l <c-w>l
 
 "" Vim Fugitive (vim-fugitive)
-nnoremap <leader>g :vert Git<CR>
+nnoremap <leader>g :G<CR>
 
 " Undotree
 nnoremap <leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
