@@ -28,6 +28,9 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
+" nvim signs (depends on plenary.nvim)
+Plug 'lewis6991/gitsigns.nvim'
+
 " Quickstart configurations for the Nvim LSP client
 Plug 'neovim/nvim-lspconfig'
 
@@ -68,9 +71,6 @@ Plug 'dominikduda/vim_current_word'
 "" Main interface
 " Vim python syntax
 Plug 'vim-python/python-syntax'
-
-" A Vim plugin which shows a git diff in the sign column. It shows which lines have been added, modified, or removed.
-Plug 'airblade/vim-gitgutter'
 
 " lean & mean status/tabline for vim that's light as air
 Plug 'vim-airline/vim-airline'
@@ -214,9 +214,6 @@ let g:indentLine_char = '│'
 let g:airline_theme='onedark'
 " fix font symbols
 let g:airline_powerline_fonts = 1
-
-"" gitgutter configs
-let g:gitgutter_map_keys = 0
 
 "" Execute macros over visual range
 " visual-at from: https://github.com/stoeffel/.dotfiles/blob/master/vim/visual-at.vim
