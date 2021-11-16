@@ -72,11 +72,8 @@ Plug 'dominikduda/vim_current_word'
 " Vim python syntax
 Plug 'vim-python/python-syntax'
 
-" lean & mean status/tabline for vim that's light as air
-Plug 'vim-airline/vim-airline'
-
-" A collection of themes for vim-airline
-Plug 'vim-airline/vim-airline-themes'
+" A blazing fast and easy to configure neovim statusline plugin written in pure lua.
+Plug 'nvim-lualine/lualine.nvim'
 
 " gruvbox colorscheme
 Plug 'morhetz/gruvbox'
@@ -208,12 +205,6 @@ inoremap <expr> <nl> pumvisible() ? "\<C-y>" : "\<C-g>u\<NL>"
 "" Indent Lines config
 let g:indentLine_color_term = 237
 let g:indentLine_char = '│'
-
-"" airline/powerline settings
-" airline theme
-let g:airline_theme='onedark'
-" fix font symbols
-let g:airline_powerline_fonts = 1
 
 "" Execute macros over visual range
 " visual-at from: https://github.com/stoeffel/.dotfiles/blob/master/vim/visual-at.vim
