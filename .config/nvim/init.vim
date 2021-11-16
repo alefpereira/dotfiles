@@ -87,6 +87,9 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}
 " Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify, etc
 Plug 'ryanoasis/vim-devicons'
 
+" lua `fork` of vim-web-devicons for neovim
+Plug 'kyazdani42/nvim-web-devicons'
+
 "" Other functionalities
 " Maximizes and restores the current window in Vim.
 "Plug 'szw/vim-maximizer'
