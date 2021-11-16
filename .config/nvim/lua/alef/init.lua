@@ -12,6 +12,9 @@ require'lualine'.setup{
     section_separators = { left = '', right = ''},
   },
   sections = {
+    -- lualine_b = {{'branch', icon=''}},
+    -- lualine_b = {{'FugitiveHead', icon=''}},
+    -- lualine_b = {{'b:gitsigns_head', icon=''}},
     lualine_c = {
       {
         'filename',
