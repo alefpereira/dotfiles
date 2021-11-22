@@ -6,7 +6,7 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export EDITOR=/usr/bin/nvim
 
 ## Rust Cargo
-export PATH="$HOME/.cargo/bin:$PATH"
+. "$HOME/.cargo/env"
 
 ## Local Visual Studio Code path
 export PATH="$HOME/Softwares/VSCode-linux-x64/bin/:$PATH"
@@ -26,7 +26,7 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-## Luarocks
+## Lua and Luarocks
 if [[ -n "`which luarocks 2>/dev/null`" ]]; then
     eval `luarocks path --bin`
 fi
