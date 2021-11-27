@@ -52,6 +52,9 @@ Plug 'mbbill/undotree'
 " Nvim Treesitter configurations and abstraction layer
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+" Show code context
+Plug 'romgrk/nvim-treesitter-context'
+
 " A tree explorer plugin for vim.
 "Plug 'preservim/nerdtree'
 
