@@ -52,9 +52,6 @@ Plug 'mbbill/undotree'
 " Nvim Treesitter configurations and abstraction layer
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-" Show code context
-Plug 'romgrk/nvim-treesitter-context'
-
 " A tree explorer plugin for vim.
 "Plug 'preservim/nerdtree'
 
@@ -95,6 +92,9 @@ Plug 'ryanoasis/vim-devicons'
 
 " lua `fork` of vim-web-devicons for neovim
 Plug 'kyazdani42/nvim-web-devicons'
+
+" Show code context
+Plug 'romgrk/nvim-treesitter-context'
 
 "" Other functionalities
 " Maximizes and restores the current window in Vim.
