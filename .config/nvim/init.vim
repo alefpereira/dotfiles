@@ -71,6 +71,9 @@ Plug 'ntpeters/vim-better-whitespace'
 " Plugin highlighting word under cursor and all of its occurences
 Plug 'dominikduda/vim_current_word'
 
+" Treesitter module to rainbow parenthesis
+Plug 'p00f/nvim-ts-rainbow'
+
 "" Main interface
 " Vim python syntax
 Plug 'vim-python/python-syntax'
