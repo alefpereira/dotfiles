@@ -34,6 +34,9 @@ set softtabstop=-1
 set shiftwidth=0
 " On pressing tab, insert 4 spaces
 set expandtab
+" Smartcase
+set ignorecase
+set smartcase
 
 " More customization
 " Highlight current line
