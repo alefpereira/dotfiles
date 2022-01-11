@@ -61,18 +61,6 @@ end
 local nvim_lsp = require('lspconfig')
 local configs = require'lspconfig/configs'
 
--- ls_emmet configs
-configs.ls_emmet = {
-  default_config = {
-    cmd = { 'ls_emmet', '--stdio' };
-    filetypes = { 'html', 'css', 'scss', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' };
-    root_dir = function(fname)
-      return vim.loop.cwd()
-    end;
-    settings = {};
-  };
-}
-
 -- lua sumneko language server config (Copy of ThePrimeagen)
 local sumneko_root_path = vim.env.HOME .. "/Softwares/lua-language-server"
 local sumneko_binary = sumneko_root_path .. "/bin/Linux/lua-language-server"
@@ -107,7 +95,6 @@ local servers = {
   {"pyright", {}},
   {"tsserver", {}},
   {"cssls", {}},
-  {"ls_emmet", {}},
   {"eslint", {}},
   {"jsonls", {}},
   {"html", {}},
