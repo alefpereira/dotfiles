@@ -213,7 +213,7 @@ inoremap <expr> <nl> pumvisible() ? "\<C-y>" : "\<C-g>u\<NL>"
 
 "" Indent Lines config
 let g:indentLine_color_term = 237
-let g:indentLine_char = '│'
+let g:indentLine_char = '▏'
 
 "" Execute macros over visual range
 " visual-at from: https://github.com/stoeffel/.dotfiles/blob/master/vim/visual-at.vim
