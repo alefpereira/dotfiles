@@ -1,6 +1,7 @@
 fun! ColorMyPencils()
     "" Colors
     " Terminal Color Scheme
+    "let g:gruvbox_contrast_dark='hard'
     "colorscheme gruvbox
     "For "codedark" also set netrwMarkFile to fix netrw marked files
     colorscheme codedark

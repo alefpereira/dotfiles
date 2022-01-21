@@ -83,9 +83,6 @@ Plug 'morhetz/gruvbox'
 " VSCode (code) dark+ inspired colorscheme.
 Plug 'tomasiser/vim-code-dark'
 
-" onehalf colorscheme
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
-
 " Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify, etc
 Plug 'ryanoasis/vim-devicons'
 
@@ -123,6 +120,9 @@ Plug 'tpope/vim-obsession'
 
 " EditorConfig plugin for Vim (Use for parsing .editorconfig files.)
 Plug 'editorconfig/editorconfig-vim'
+
+" Show color table. Useful when playing with colorschemes and highlights
+"Plug 'guns/xterm-color-table.vim'
 
 call plug#end()
 " ====== End of vim-plug manager setup ======
