@@ -232,12 +232,11 @@ let g:python3_host_prog = $PYENV_ROOT . '/versions/py3nvim/bin/python'
 "" Set maximizer default keymaps
 "let g:maximizer_set_default_mapping = 1
 
-"" vim-markdown
-" Disable auto folding
-"let g:vim_markdown_folding_disabled = 1
-" Disable conceal
-"let g:vim_markdown_conceal = 0
-"let g:vim_markdown_conceal_code_blocks = 0
+"" markdown
+" This interacts with Yggdroot/indentLine plugin: Disable conceal for markdown
+augroup FILETYPES
+  autocmd FileType markdown let b:indentLine_enabled = 0
+augroup END
 
 "" Fixed python syntax
 let g:python_highlight_all = 1
