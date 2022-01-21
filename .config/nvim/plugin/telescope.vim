@@ -16,3 +16,6 @@ nnoremap <leader>f <cmd>lua require('telescope.builtin').live_grep
     \   '--glob',
     \   '!.git'
     \ }}<cr>
+
+nnoremap <leader>tr <cmd>Telescope resume<cr>
+nnoremap <leader>tp <cmd>Telescope pickers<cr>
