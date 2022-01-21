@@ -2,7 +2,7 @@
 
 Dotfiles Tree:
 ```
-$ tree -a -I ".git*|README.md|dotfile.sh"
+$ tree -a -I ".git*|README.md|dotfile.sh|Session.vim"
 .
 ├── .config
 │   ├── fish
@@ -25,6 +25,7 @@ $ tree -a -I ".git*|README.md|dotfile.sh"
 │       │       ├── git.lua
 │       │       ├── init.lua
 │       │       ├── lsp.lua
+│       │       ├── lualine.lua
 │       │       ├── telescope.lua
 │       │       └── treesitter.lua
 │       └── plugin
@@ -40,7 +41,6 @@ $ tree -a -I ".git*|README.md|dotfile.sh"
 │               ├── open_in_terminator.nemo_action
 │               └── open_with_code.nemo_action
 ├── .profile
-├── Session.vim
 ├── .vim
 │   └── plugin
 │       └── fzf.vim
