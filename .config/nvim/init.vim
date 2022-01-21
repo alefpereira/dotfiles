@@ -112,9 +112,6 @@ Plug 'tpope/vim-eunuch'
 " obsession.vim: continuously updated session files
 Plug 'tpope/vim-obsession'
 
-" Markdown Vim Mode
-"Plug 'plasticboy/vim-markdown'
-
 " A simple, easy-to-use Vim alignment plugin.
 " Plug 'junegunn/vim-easy-align'
 
