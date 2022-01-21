@@ -2,6 +2,9 @@
 local actions = require('telescope.actions')
 require('telescope').setup{
   defaults = {
+    cache_picker = {
+      num_pickers = 3
+    },
     mappings = {
       i = {
         ["<C-j>"]= actions.select_default,
