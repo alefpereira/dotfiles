@@ -2,7 +2,9 @@ fun! ColorMyPencils()
     "" Colors
     " Terminal Color Scheme
     "colorscheme gruvbox
+    "For "codedark" also set netrwMarkFile to fix netrw marked files
     colorscheme codedark
+    highlight netrwMarkFile ctermbg=237
 
     " Column lines color
     highlight ColorColumn ctermbg=238

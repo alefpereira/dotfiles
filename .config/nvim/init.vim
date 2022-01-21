@@ -54,9 +54,6 @@ Plug 'mbbill/undotree'
 " Nvim Treesitter configurations and abstraction layer
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-" A tree explorer plugin for vim.
-"Plug 'preservim/nerdtree'
-
 " vimspector - A multi-language debugging system for Vim
 "Plug 'puremourning/vimspector'
 
@@ -104,6 +101,9 @@ Plug 'romgrk/nvim-treesitter-context'
 
 " eunuch.vim: Helpers for UNIX
 Plug 'tpope/vim-eunuch'
+
+" vinegar.vim: Combine with netrw to create a delicious salad dressing
+"Plug 'tpope/vim-vinegar'
 
 "" Other plugins
 " surround.vim: quoting/parenthesizing made simple
@@ -204,8 +204,8 @@ nnoremap <leader>g :G<CR>
 " Undotree
 nnoremap <leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
-" NERDTree
-"nnoremap <silent> <leader>e :NERDTreeToggle<CR>
+" Open netrw Lexplore
+nnoremap <silent> <leader>e :Lexplore<CR>
 
 " <cr> and <c-j> to behave like <c-y> in completion list
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
@@ -226,10 +226,6 @@ function! ExecuteMacroOverVisualRange()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
 
-"" NERDTree
-" NerdTree always shows hidden files
-"let NERDTreeShowHidden=1
-
 "" Virtualenv python3 provider
 let g:python3_host_prog = $PYENV_ROOT . '/versions/py3nvim/bin/python'
 
@@ -245,6 +241,11 @@ let g:python3_host_prog = $PYENV_ROOT . '/versions/py3nvim/bin/python'
 
 "" Fixed python syntax
 let g:python_highlight_all = 1
+
+"" netrw settings
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+"let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
 " ====== Lua settings ======
 lua require('alef')
