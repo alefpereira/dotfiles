@@ -7,10 +7,13 @@ require('telescope').setup{
     },
     mappings = {
       i = {
-        ["<C-j>"]= actions.select_default,
+        ["<c-j>"] = actions.select_default,
+    	  ['<c-d>'] = actions.delete_buffer,
       },
       n = {
-        ["<C-j>"]= actions.select_default,
+        ["<c-j>"] = actions.select_default,
+    	  ['<c-d>'] = actions.delete_buffer,
+    	  ['<c-c>'] = actions.close,
       }
     }
   },
