@@ -7,6 +7,7 @@ require('telescope').setup{
     },
     mappings = {
       i = {
+        ["<c-h>"] = "which_key",
         ["<c-j>"] = actions.select_default,
     	  ['<c-d>'] = actions.delete_buffer,
       },
