@@ -20,7 +20,6 @@ cmd [[packadd packer.nvim]]
 -- Set leader to space
 vim.g.mapleader = ' '
 
--- require("alef.telescope")
 local packer = require('packer')
 return packer.startup(function(use)
   -- set packer to manage itself
@@ -38,9 +37,9 @@ return packer.startup(function(use)
   -- Find, Filter, Preview, Pick. All lua, all the time.
   use {
     'nvim-telescope/telescope.nvim',
-    --config = function()
-    --   require "alef.telescope"
-    --end,
+    config = function()
+      require "alef.telescope"
+    end,
     requires = {
       { 'nvim-lua/plenary.nvim' },
       { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
