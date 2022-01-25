@@ -247,7 +247,7 @@ let g:python_highlight_all = 1
 
 "" netrw settings
 let g:netrw_banner = 0
-let g:netrw_liststyle = 3
+"let g:netrw_liststyle = 3
 "let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
 " ====== Lua settings ======
