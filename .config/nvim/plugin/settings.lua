@@ -1,10 +1,11 @@
 local set = vim.opt
+local cmd = vim.cmd
 
 -- Minimal (but really valuable) settings
 -- Show line numbers
 set.number = true
 -- Enable filetype detection, pluins and indentation
-vim.cmd('filetype plugin indent on')
+cmd('filetype plugin indent on')
 -- Always display the status bar
 set.laststatus = 2
 -- Always show the command typed in the status line
