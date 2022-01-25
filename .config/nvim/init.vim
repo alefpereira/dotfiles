@@ -208,6 +208,12 @@ nnoremap <silent> <leader>e :Lexplore<CR>
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <expr> <nl> pumvisible() ? "\<C-y>" : "\<C-g>u\<NL>"
 
+" quickfix list mappings
+nnoremap <silent> <leader>qo :copen<CR>
+nnoremap <silent> <leader>qc :cclose<CR>
+nnoremap <silent> <leader>qn :cn<CR>
+nnoremap <silent> <leader>qp :cp<CR>
+
 " ====== End of Keymaps ======
 
 "" Indent Lines config
