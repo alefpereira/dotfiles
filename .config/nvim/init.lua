@@ -130,7 +130,12 @@ return packer.startup(function(use)
   use 'morhetz/gruvbox'
 
   -- VSCode (code) dark+ inspired colorscheme.
-  use 'tomasiser/vim-code-dark'
+  use {
+    'tomasiser/vim-code-dark',
+    config = function ()
+      vim.cmd('colorscheme codedark')
+    end
+  }
 
   -- Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify, etc
   use 'ryanoasis/vim-devicons'

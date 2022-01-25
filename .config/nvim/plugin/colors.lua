@@ -4,7 +4,6 @@ function ColorMyPencils()
   --vim.g.gruvbox_contrast_dark='hard'
   --vim.cmd('colorscheme gruvbox')
   --For "codedark" also set netrwMarkFile to fix netrw marked files
-  vim.cmd('colorscheme codedark')
   -- TODO: Use vim.highlight.create to setup highlights
   vim.cmd('highlight netrwMarkFile ctermbg=237')
 
