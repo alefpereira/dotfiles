@@ -239,6 +239,7 @@ let g:python3_host_prog = $PYENV_ROOT . '/versions/py3nvim/bin/python'
 " This interacts with Yggdroot/indentLine plugin: Disable conceal for markdown
 augroup FILETYPES
   autocmd FileType markdown let b:indentLine_enabled = 0
+  autocmd FileType markdown set conceallevel=0
 augroup END
 
 "" Fixed python syntax
