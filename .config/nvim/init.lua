@@ -4,6 +4,7 @@ local fn = vim.fn
 -- packer.nvim
 -- Auto install packer.nvim if not exists
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local packer_bootstrap = nil
 if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap = fn.system({
 		'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim',
@@ -14,6 +15,10 @@ end
 cmd 'autocmd BufWritePost init.lua PackerCompile'
 
 cmd [[packadd packer.nvim]]
+
+-- Leader map
+-- Set leader to space
+vim.g.mapleader = ' '
 
 -- require("alef.telescope")
 local packer = require('packer')
