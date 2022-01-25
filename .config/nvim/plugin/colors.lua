@@ -1,3 +1,4 @@
+--[[
 fun! ColorMyPencils()
     "" Colors
     " Terminal Color Scheme
@@ -21,3 +22,4 @@ fun! ColorMyPencils()
 endfun
 
 call ColorMyPencils()
+--]]
