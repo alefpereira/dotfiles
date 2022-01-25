@@ -1,42 +1,4 @@
---[[
-"nnoremap <F12> :lua vim.lsp.buf.definition()<CR>
-nnoremap gd :lua vim.lsp.buf.definition()<CR>
-nnoremap gD :lua vim.lsp.buf.declaraion()<CR>
-nnoremap gi :lua vim.lsp.buf.implementation()<CR>
-nnoremap gr :lua vim.lsp.buf.references()<CR>
-nnoremap <C-k> :lua vim.lsp.buf.signature_help()<CR>
-nnoremap <F2> :lua vim.lsp.buf.rename()<CR>
-nnoremap K :lua vim.lsp.buf.hover()<CR>
-" nnoremap <leader>vca :lua vim.lsp.buf.code_action()<CR>
-" nnoremap <leader>vsd :lua vim.lsp.diagnostic.show_line_diagnostics(); vim.lsp.util.show_line_diagnostics()<CR>
-" nnoremap <leader>vn :lua vim.lsp.diagnostic.goto_next()<CR>
-" nnoremap <leader>vll :call LspLocationList()<CR>
-
-"" Telescope (telescope.nvim)
-nnoremap <C-P> <cmd>Telescope find_files
-    \ find_command=fd,--type,f,--hidden,--exclude,.git<cr>
-nnoremap <silent> <leader>b <cmd>Telescope buffers
-    \ show_all_buffers='true' sort_lastused='true'<CR>
-nnoremap <leader>f <cmd>lua require('telescope.builtin').live_grep
-    \ {vimgrep_arguments={
-    \   'rg',
-    \   '--color=never',
-    \   '--no-heading',
-    \   '--hidden',
-    \   '--with-filename',
-    \   '--line-number',
-    \   '--column',
-    \   '--smart-case',
-    \   '--glob',
-    \   '!.git'
-    \ }}<cr>
-
-nnoremap <leader>tr <cmd>Telescope resume<cr>
-nnoremap <leader>tp <cmd>Telescope pickers<cr>
---]]
-
--- ====== Keymaps ======
-
+-- General Keymaps
 -- Esc Remaps
 -- inoremap jk <Esc>
 
@@ -76,8 +38,6 @@ vim.cmd('nnoremap Y y$')
 --vim.api.nvim_set_keymap('x', 'p', '_dP', { noremap = true })
 vim.cmd('xnoremap p _dP')
 
--- FIXME: ALL LEADER MAPPINGS
--- TODO: Use lua api
 -- Select all text
 --vim.api.nvim_set_keymap('n', '<Leader>a', 'ggVG', { noremap = true })
 vim.cmd('nnoremap <leader>a ggVG')
@@ -126,5 +86,42 @@ vim.cmd('nnoremap <silent> <leader>qn :cn<CR>')
 vim.cmd('nnoremap <silent> <leader>qp :cp<CR>')
 
 --LSP Mappings
+--nnoremap <F12> :lua vim.lsp.buf.definition()<CR>
+vim.cmd('nnoremap gd :lua vim.lsp.buf.definition()<CR>')
+vim.cmd('nnoremap gD :lua vim.lsp.buf.declaraion()<CR>')
+vim.cmd('nnoremap gi :lua vim.lsp.buf.implementation()<CR>')
+vim.cmd('nnoremap gr :lua vim.lsp.buf.references()<CR>')
+vim.cmd('nnoremap <C-k> :lua vim.lsp.buf.signature_help()<CR>')
+vim.cmd('nnoremap <F2> :lua vim.lsp.buf.rename()<CR>')
+vim.cmd('nnoremap K :lua vim.lsp.buf.hover()<CR>')
+-- nnoremap <leader>vca :lua vim.lsp.buf.code_action()<CR>
+-- nnoremap <leader>vsd :lua vim.lsp.diagnostic.show_line_diagnostics(); vim.lsp.util.show_line_diagnostics()<CR>
+-- nnoremap <leader>vn :lua vim.lsp.diagnostic.goto_next()<CR>
+-- nnoremap <leader>vll :call LspLocationList()<CR>
 
---Telescope (telescope.nvim)
+-- Telescope (telescope.nvim)
+vim.cmd([[
+  nnoremap <C-P> <cmd>Telescope find_files
+    \ find_command=fd,--type,f,--hidden,--exclude,.git<cr>
+]])
+vim.cmd([[
+  nnoremap <silent> <leader>b <cmd>Telescope buffers
+    \ show_all_buffers='true' sort_lastused='true'<CR>
+]])
+vim.cmd([[
+  nnoremap <leader>f <cmd>lua require('telescope.builtin').live_grep
+    \ {vimgrep_arguments={
+    \   'rg',
+    \   '--color=never',
+    \   '--no-heading',
+    \   '--hidden',
+    \   '--with-filename',
+    \   '--line-number',
+    \   '--column',
+    \   '--smart-case',
+    \   '--glob',
+    \   '!.git'
+    \ }}<cr>
+]])
+vim.cmd('nnoremap <leader>tr <cmd>Telescope resume<cr>')
+vim.cmd('nnoremap <leader>tp <cmd>Telescope pickers<cr>')
