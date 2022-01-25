@@ -67,7 +67,7 @@ set.updatetime = 50
 -- Setup persistent undo history
 set.swapfile = false
 set.backup = false
-set.undodir = '~/.vim/undodir'
+set.undodir = vim.fn.getenv 'HOME' .. '/.vim/undodir'
 set.undofile = true
 set.hidden = true
 -- Hide Pattern not found message from completion
