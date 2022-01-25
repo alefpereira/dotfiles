@@ -19,9 +19,11 @@ $ tree -a -I ".git*|README.md|dotfile.sh|Session.vim"
 │   │       └── vim.fish
 │   ├── libinput-gestures.conf
 │   └── nvim
-│       ├── init.vim
+│       ├── init.lua
 │       ├── lua
 │       │   └── alef
+│       │       ├── cmp.lua
+│       │       ├── colors.lua
 │       │       ├── git.lua
 │       │       ├── init.lua
 │       │       ├── lsp.lua
@@ -29,10 +31,8 @@ $ tree -a -I ".git*|README.md|dotfile.sh|Session.vim"
 │       │       ├── telescope.lua
 │       │       └── treesitter.lua
 │       └── plugin
-│           ├── colors.vim
-│           ├── lsp.vim
-│           ├── sets.vim
-│           └── telescope.vim
+│           ├── mappings.lua
+│           └── settings.lua
 ├── .editorconfig
 ├── .local
 │   └── share
