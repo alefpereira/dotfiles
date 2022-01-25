@@ -1,22 +1,3 @@
---[[FIXME
-" ====== Other settings ======
-"" Execute macros over visual range
-" visual-at from: https://github.com/stoeffel/.dotfiles/blob/master/vim/visual-at.vim
-xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
-
-function! ExecuteMacroOverVisualRange()
-  echo "@".getcmdline()
-  execute ":'<,'>normal @".nr2char(getchar())
-endfunction
-
-"" markdown
-" This interacts with Yggdroot/indentLine plugin: Disable conceal for markdown
-augroup FILETYPES
-  autocmd FileType markdown let b:indentLine_enabled = 0
-  autocmd FileType markdown set conceallevel=0
-augroup END
---]]
-
 local set = vim.opt
 
 -- Minimal (but really valuable) settings
@@ -92,3 +73,25 @@ vim.g.python_highlight_all = 1
 vim.g.netrw_banner = 0
 --vim.g.netrw_liststyle = 3
 --vim.g.netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+
+-- Execute macros over visual range
+-- visual-at from:
+--    https://github.com/stoeffel/.dotfiles/blob/master/vim/visual-at.vim
+vim.api.nvim_exec([[
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction
+
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+]], false)
+
+
+-- markdown
+-- This interacts with Yggdroot/indentLine plugin: Disable conceal for markdown
+vim.api.nvim_exec([[
+augroup FILETYPES
+  autocmd FileType markdown let b:indentLine_enabled = 0
+  autocmd FileType markdown set conceallevel=0
+augroup END
+]], false)
