@@ -133,7 +133,7 @@ return packer.startup(function(use)
   use {
     'tomasiser/vim-code-dark',
     config = function ()
-      vim.cmd('colorscheme codedark')
+      require('alef.colors').setup()
     end
   }
 
