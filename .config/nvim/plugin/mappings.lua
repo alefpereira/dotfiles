@@ -101,27 +101,27 @@ vim.cmd('nnoremap K :lua vim.lsp.buf.hover()<CR>')
 
 -- Telescope (telescope.nvim)
 vim.cmd([[
-  nnoremap <C-P> <cmd>Telescope find_files
-    \ find_command=fd,--type,f,--hidden,--exclude,.git<cr>
+nnoremap <C-P> <cmd>Telescope find_files
+  \ find_command=fd,--type,f,--hidden,--exclude,.git<cr>
 ]])
 vim.cmd([[
-  nnoremap <silent> <leader>b <cmd>Telescope buffers
-    \ show_all_buffers='true' sort_lastused='true'<CR>
+nnoremap <silent> <leader>b <cmd>Telescope buffers
+  \ show_all_buffers='true' sort_lastused='true'<CR>
 ]])
 vim.cmd([[
-  nnoremap <leader>f <cmd>lua require('telescope.builtin').live_grep
-    \ {vimgrep_arguments={
-    \   'rg',
-    \   '--color=never',
-    \   '--no-heading',
-    \   '--hidden',
-    \   '--with-filename',
-    \   '--line-number',
-    \   '--column',
-    \   '--smart-case',
-    \   '--glob',
-    \   '!.git'
-    \ }}<cr>
+nnoremap <leader>f <cmd>lua require('telescope.builtin').live_grep
+  \ {vimgrep_arguments={
+  \   'rg',
+  \   '--color=never',
+  \   '--no-heading',
+  \   '--hidden',
+  \   '--with-filename',
+  \   '--line-number',
+  \   '--column',
+  \   '--smart-case',
+  \   '--glob',
+  \   '!.git'
+  \ }}<cr>
 ]])
 vim.cmd('nnoremap <leader>tr <cmd>Telescope resume<cr>')
 vim.cmd('nnoremap <leader>tp <cmd>Telescope pickers<cr>')
