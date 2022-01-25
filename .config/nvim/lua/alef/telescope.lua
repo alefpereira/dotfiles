@@ -1,6 +1,15 @@
+local telescope_ok, telescope = pcall(require, "telescope")
+if not telescope_ok then
+   return
+end
+
+local actions_ok, actions = pcall(require, "telescope.actions")
+if not actions_ok then
+   return
+end
+
 -- Telescope.nvim setup
-local actions = require('telescope.actions')
-require('telescope').setup{
+telescope.setup{
   defaults = {
     cache_picker = {
       num_pickers = 3
@@ -27,4 +36,4 @@ require('telescope').setup{
   },
 }
 
-require('telescope').load_extension('fzf')
+telescope.load_extension('fzf')

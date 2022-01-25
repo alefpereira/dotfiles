@@ -1,3 +1,4 @@
+--[[
 "" Minimal (but really valuable) settings
 " Show line numbers
 set number
@@ -55,3 +56,47 @@ set undofile
 set hidden
 " Hide Pattern not found message from completion
 set shortmess+=c
+
+" ====== Other settings ======
+"" Leader map
+" Set leader to space
+let mapleader = " "
+
+"" Let vim to highlight embeded code: Lua, Python
+let g:vimsyn_embed='lP'
+
+
+"" Indent Lines config
+let g:indentLine_color_term = 237
+let g:indentLine_char = '▏'
+
+"" Execute macros over visual range
+" visual-at from: https://github.com/stoeffel/.dotfiles/blob/master/vim/visual-at.vim
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction
+
+"" Virtualenv python3 provider
+let g:python3_host_prog = $PYENV_ROOT . '/versions/py3nvim/bin/python'
+
+"" Set maximizer default keymaps
+"let g:maximizer_set_default_mapping = 1
+
+"" markdown
+" This interacts with Yggdroot/indentLine plugin: Disable conceal for markdown
+augroup FILETYPES
+  autocmd FileType markdown let b:indentLine_enabled = 0
+  autocmd FileType markdown set conceallevel=0
+augroup END
+
+"" Fixed python syntax
+let g:python_highlight_all = 1
+
+"" netrw settings
+let g:netrw_banner = 0
+"let g:netrw_liststyle = 3
+"let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+--]]
