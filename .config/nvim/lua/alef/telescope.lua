@@ -43,6 +43,9 @@ telescope.setup{
       show_all_buffers='true',
       sort_lastused='true',
     },
+    help_tags = {
+      theme='dropdown',
+    },
   },
   extensions = {
     fzf = {

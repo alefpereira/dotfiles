@@ -109,3 +109,4 @@ cmd[[nnoremap <silent> <leader>b <cmd>Telescope buffers<cr>]]
 cmd[[nnoremap <leader>f <cmd>Telescope live_grep<cr>]]
 cmd('nnoremap <leader>tr <cmd>Telescope resume<cr>')
 cmd('nnoremap <leader>tp <cmd>Telescope pickers<cr>')
+cmd('nnoremap <leader>th <cmd>Telescope help_tags<cr>')
