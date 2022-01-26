@@ -19,7 +19,7 @@ local function filename_path_display(opts, path)
   local os_sep = utils.get_separator()
   local dirname = path:gsub(os_sep .. filename, ' ')
 
-  return string.format('%s - %s', filename, dirname)
+  return string.format('%s ● %s', filename, dirname)
 end
 
 -- Telescope.nvim setup
