@@ -103,11 +103,11 @@ cmd('nnoremap K :lua vim.lsp.buf.hover()<CR>')
 -- Telescope (telescope.nvim)
 cmd[[
 nnoremap <C-P> <cmd>Telescope find_files
-  \ find_command=fd,--type,f,--hidden,--exclude,.git<cr>
+  \ find_command=fd,--type,f,--hidden,--exclude,.git theme=dropdown<cr>
 ]]
 cmd[[
 nnoremap <silent> <leader>b <cmd>Telescope buffers
-  \ show_all_buffers='true' sort_lastused='true'<CR>
+  \ show_all_buffers='true' sort_lastused='true' theme=dropdown<CR>
 ]]
 cmd[[
 nnoremap <leader>f <cmd>lua require('telescope.builtin').live_grep
