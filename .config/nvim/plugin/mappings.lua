@@ -66,6 +66,9 @@ cmd('xnoremap <leader>d "_d')
 --nnoremap <leader>k <c-w>k
 --nnoremap <leader>l <c-w>l
 
+-- Jetpack buffer navigation
+cmd('nnoremap <leader>l :ls<cr>:b<space>')
+
 -- Vim Fugitive (vim-fugitive)
 cmd('nnoremap <leader>g :G<CR>')
 
