@@ -20,7 +20,6 @@ telescope.setup{
     mappings = {
       i = {
         ["<c-j>"] = actions.select_default,
-    	  ['<c-d>'] = actions.delete_buffer,
       },
       n = {
         ["<c-j>"] = actions.select_default,
