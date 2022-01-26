@@ -8,6 +8,9 @@ if not actions_ok then
    return
 end
 
+local find_command = 'fd --type f --hidden --exclude .git'
+local vimgrep_arguments = 'rg --color=never --no-heading --hidden --with-filename --line-number --column --smart-case --glob !.git'
+
 -- Telescope.nvim setup
 telescope.setup{
   defaults = {
@@ -25,6 +28,21 @@ telescope.setup{
     	  ['<c-c>'] = actions.close,
       }
     }
+  },
+  pickers = {
+    find_files = {
+      find_command = vim.split(find_command, ' '),
+      theme = 'dropdown',
+    },
+    live_grep = {
+      vimgrep_arguments = vim.split(vimgrep_arguments, ' '),
+      theme = 'dropdown',
+    },
+    buffers = {
+      theme='dropdown',
+      show_all_buffers='true',
+      sort_lastused='true',
+    },
   },
   extensions = {
     fzf = {
