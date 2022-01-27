@@ -29,13 +29,9 @@ function M.setup()
       },
       mappings = {
         i = {
+          ["<esc>"] = actions.close,
           ["<c-j>"] = actions.select_default,
         },
-        n = {
-          ["<c-j>"] = actions.select_default,
-          ['<c-d>'] = actions.delete_buffer,
-          ['<c-c>'] = actions.close,
-        }
       }
     },
     pickers = {
