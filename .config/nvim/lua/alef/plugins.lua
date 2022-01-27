@@ -17,7 +17,7 @@ M.plugins = {
   {
     'nvim-telescope/telescope.nvim',
     config = function()
-      require "alef.telescope"
+      require"alef.telescope".setup()
     end,
     requires = {
       { 'nvim-lua/plenary.nvim' },
