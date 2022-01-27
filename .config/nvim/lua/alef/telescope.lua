@@ -46,6 +46,11 @@ function M.setup()
         path_display = M.filename_path_display,
       },
       buffers = {
+        mappings = {
+          i = {
+            ['<c-d>'] = actions.delete_buffer,
+          },
+        },
         theme = 'dropdown',
         show_all_buffers = true,
         sort_lastused = true,
