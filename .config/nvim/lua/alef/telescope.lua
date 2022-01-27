@@ -3,10 +3,7 @@ if not telescope_ok then
    return
 end
 
-local actions_ok, actions = pcall(require, "telescope.actions")
-if not actions_ok then
-   return
-end
+local actions = require("telescope.actions")
 
 local find_command = 'fd --type f --hidden --exclude .git'
 local vimgrep_arguments = 'rg --color=never --no-heading --hidden --with-filename --line-number --column --smart-case --glob !.git'
