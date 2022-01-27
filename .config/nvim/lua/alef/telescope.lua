@@ -55,6 +55,15 @@ function M.setup()
         sort_lastused = true,
         path_display = M.filename_path_display,
       },
+      git_files = {
+        theme='dropdown',
+        path_display = M.filename_path_display,
+        previewer = false,
+        layout_config = {
+          anchor = 'N',
+          mirror = true,
+        }
+      },
       help_tags = {
         theme='dropdown',
       },
@@ -70,6 +79,11 @@ function M.setup()
   }
 
   telescope.load_extension('fzf')
+end
+
+function M.project_files()
+  local ok = pcall(require"telescope.builtin".git_files)
+  if not ok then require"telescope.builtin".find_files() end
 end
 
 return M
