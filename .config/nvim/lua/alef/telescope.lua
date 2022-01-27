@@ -4,6 +4,7 @@ if not telescope_ok then
 end
 
 local actions = require("telescope.actions")
+local action_layout = require("telescope.actions.layout")
 local utils = require('telescope.utils')
 
 local M = {}
@@ -31,6 +32,7 @@ function M.setup()
         i = {
           ["<esc>"] = actions.close,
           ["<c-j>"] = actions.select_default,
+          ["<c-s>"] = action_layout.toggle_preview,
         },
       }
     },
@@ -39,11 +41,18 @@ function M.setup()
         find_command = vim.split(M.find_command, ' '),
         theme = 'dropdown',
         path_display = M.filename_path_display,
+        previewer = false,
+        layout_config = {
+          mirror = true,
+        }
       },
       live_grep = {
         vimgrep_arguments = vim.split(M.vimgrep_arguments, ' '),
         theme = 'dropdown',
         path_display = M.filename_path_display,
+        layout_config = {
+          mirror = true,
+        }
       },
       buffers = {
         mappings = {
@@ -55,12 +64,20 @@ function M.setup()
         show_all_buffers = true,
         sort_lastused = true,
         path_display = M.filename_path_display,
+        previewer = false,
+        layout_config = {
+          mirror = true,
+          anchor = 'N',
+        }
       },
       git_files = {
         theme='dropdown',
         path_display = M.filename_path_display,
         previewer = false,
         layout_config = {
+          -- Telescope 'dropdown' theme uses 'center' layout strategy
+          -- and this layout strategy does not support vertical anchor
+          -- but I'll keep this setting in case telescope changes it.
           anchor = 'N',
           mirror = true,
         }
