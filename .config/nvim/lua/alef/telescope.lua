@@ -8,7 +8,7 @@ local utils = require('telescope.utils')
 
 local M = {}
 
-M.find_command = 'fd --type f --hidden --exclude .git'
+M.find_command = 'fd --type file --type symlink --hidden --exclude .git'
 M.vimgrep_arguments = 'rg --color=never --no-heading --hidden --with-filename --line-number --column --smart-case --glob !.git'
 
 function M.filename_path_display(opts, path)
