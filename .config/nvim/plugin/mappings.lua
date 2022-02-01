@@ -86,8 +86,8 @@ cmd('nnoremap <silent> <leader>e :Lexplore<CR>')
 -- quickfix list mappings
 cmd('nnoremap <silent> <leader>qo :copen<CR>')
 cmd('nnoremap <silent> <leader>qc :cclose<CR>')
-cmd('nnoremap <silent> <leader>qn :cn<CR>')
-cmd('nnoremap <silent> <leader>qp :cp<CR>')
+cmd('nnoremap <silent> [q :cp<CR>')
+cmd('nnoremap <silent> ]q :cn<CR>')
 
 --LSP Mappings
 --nnoremap <F12> :lua vim.lsp.buf.definition()<CR>
