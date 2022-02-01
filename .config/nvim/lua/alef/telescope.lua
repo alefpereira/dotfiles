@@ -37,53 +37,51 @@ function M.setup()
       }
     },
     pickers = {
-      find_files = {
-        find_command = vim.split(M.find_command, ' '),
-        theme = 'dropdown',
-        path_display = M.filename_path_display,
-        previewer = false,
-        layout_config = {
-          mirror = true,
-        }
-      },
-      live_grep = {
-        vimgrep_arguments = vim.split(M.vimgrep_arguments, ' '),
-        theme = 'dropdown',
-        path_display = M.filename_path_display,
-        layout_config = {
-          mirror = true,
-        }
-      },
       buffers = {
         mappings = {
           i = {
             ['<c-d>'] = actions.delete_buffer,
           },
         },
-        theme = 'dropdown',
         show_all_buffers = true,
         sort_lastused = true,
         path_display = M.filename_path_display,
+        theme = 'dropdown',
         previewer = false,
         layout_config = {
-          mirror = true,
+          anchor = 'N',
+        },
+      },
+      find_files = {
+        find_command = vim.split(M.find_command, ' '),
+        path_display = M.filename_path_display,
+        theme='dropdown',
+        previewer = false,
+        layout_config = {
           anchor = 'N',
         }
       },
       git_files = {
-        theme='dropdown',
         path_display = M.filename_path_display,
+        theme = 'dropdown',
         previewer = false,
         layout_config = {
-          -- Telescope 'dropdown' theme uses 'center' layout strategy
-          -- and this layout strategy does not support vertical anchor
-          -- but I'll keep this setting in case telescope changes it.
           anchor = 'N',
-          mirror = true,
+        },
+      },
+      live_grep = {
+        vimgrep_arguments = vim.split(M.vimgrep_arguments, ' '),
+        path_display = M.filename_path_display,
+        theme = 'dropdown',
+        layout_config = {
+          anchor = 'S',
         }
       },
       help_tags = {
         theme='dropdown',
+        layout_config = {
+          anchor = 'S',
+        }
       },
     },
     extensions = {
