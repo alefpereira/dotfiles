@@ -28,6 +28,16 @@ M.plugins = {
   -- nvim signs (depends on plenary.nvim)
   'lewis6991/gitsigns.nvim',
 
+  -- Inject LSP diagnostics, code actions, and more via Lua
+  {
+    'jose-elias-alvarez/null-ls.nvim',
+    config = function()
+      require("null-ls").setup {
+      }
+    end,
+    requires = { 'nvim-lua/plenary.nvim' },
+  },
+
   -- Quickstart configurations for the Nvim LSP client
   {
     'neovim/nvim-lspconfig',
