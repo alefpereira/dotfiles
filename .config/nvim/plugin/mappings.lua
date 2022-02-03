@@ -110,3 +110,11 @@ cmd[[nnoremap <leader>f <cmd>Telescope live_grep<cr>]]
 cmd('nnoremap <leader>tr <cmd>Telescope resume<cr>')
 cmd('nnoremap <leader>tp <cmd>Telescope pickers<cr>')
 cmd('nnoremap <leader>th <cmd>Telescope help_tags<cr>')
+
+-- Trouble (trouble.nvim) (mappings from repo page)
+cmd[[nnoremap <leader>xx <cmd>TroubleToggle<cr>]]
+cmd[[nnoremap <leader>xw <cmd>TroubleToggle workspace_diagnostics<cr>]]
+cmd[[nnoremap <leader>xd <cmd>TroubleToggle document_diagnostics<cr>]]
+cmd[[nnoremap <leader>xq <cmd>TroubleToggle quickfix<cr>]]
+cmd[[nnoremap <leader>xl <cmd>TroubleToggle loclist<cr>]]
+cmd[[nnoremap gR <cmd>TroubleToggle lsp_references<cr>]]

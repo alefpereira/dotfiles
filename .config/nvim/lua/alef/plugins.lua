@@ -39,6 +39,18 @@ M.plugins = {
     }
   },
 
+  -- A pretty diagnostics
+  {
+    'folke/trouble.nvim',
+    config = function()
+      require("trouble").setup {
+      }
+    end,
+    requires = {
+      { 'neovim/nvim-lspconfig' },
+    }
+  },
+
   -- Autocompletion
   {
     'hrsh7th/nvim-cmp',
