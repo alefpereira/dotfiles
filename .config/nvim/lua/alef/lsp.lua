@@ -24,13 +24,9 @@ end
 -- For servers configurations: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 local configs = require('lspconfig/configs')
 
--- lua sumneko language server config (Copy of ThePrimeagen)
--- For sumneko instalation: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua
-local sumneko_root_path = vim.env.HOME .. "/Softwares/lua-language-server"
-local sumneko_binary = sumneko_root_path .. "/bin/Linux/lua-language-server"
+-- lua sumneko language server config (installation using system package server)
 
 local sumneko_config = {
-  cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
   settings = {
     Lua = {
       runtime = {
