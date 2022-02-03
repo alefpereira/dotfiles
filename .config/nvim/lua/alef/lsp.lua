@@ -25,7 +25,6 @@ end
 local configs = require('lspconfig/configs')
 
 -- lua sumneko language server config (installation using system package server)
-
 local sumneko_config = {
   settings = {
     Lua = {
