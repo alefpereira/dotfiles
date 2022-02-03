@@ -26,7 +26,10 @@ M.plugins = {
   },
 
   -- nvim signs (depends on plenary.nvim)
-  'lewis6991/gitsigns.nvim',
+  {
+    'lewis6991/gitsigns.nvim',
+    requires = { 'nvim-lua/plenary.nvim' },
+  },
 
   -- Inject LSP diagnostics, code actions, and more via Lua
   {
