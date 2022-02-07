@@ -32,3 +32,6 @@ if [[ -n "`which luarocks 2>/dev/null`" ]]; then
 fi
 
 alias luamake=$HOME/Softwares/lua-language-server/3rd/luamake/luamake
+
+# Set Caps Lock as Ctrl
+setxkbmap -option ctrl:nocaps
