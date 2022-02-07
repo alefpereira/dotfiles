@@ -63,10 +63,6 @@ vim.g.vimsyn_embed='lP'
 vim.g.indentLine_color_term = 237
 vim.g.indentLine_char = '▏'
 
--- Virtualenv python3 provider
-vim.g.python3_host_prog = vim.fn.getenv 'PYENV_ROOT' ..
-  '/versions/py3nvim/bin/python'
-
 -- Fixed python syntax
 vim.g.python_highlight_all = 1
 

@@ -21,9 +21,14 @@ augroup end
 
 cmd [[packadd packer.nvim]]
 
+-- Things that shoud be set before everything else
 -- Leader map
 -- Set leader to space
 vim.g.mapleader = ' '
+
+-- Virtualenv python3 provider
+vim.g.python3_host_prog = vim.fn.getenv 'PYENV_ROOT' ..
+  '/versions/py3nvim/bin/python'
 
 local packer = require('packer')
 local plugins = require('alef.plugins')
