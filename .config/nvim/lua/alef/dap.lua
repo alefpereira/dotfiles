@@ -5,6 +5,7 @@ end
 
 local M = {}
 
+-- lua debugger: one-small-step-for-vimkind
 function M.nlua()
   dap.configurations.lua = {
     {
