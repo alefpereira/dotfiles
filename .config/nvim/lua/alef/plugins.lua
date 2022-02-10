@@ -117,16 +117,12 @@ M.plugins = {
   {
     'mfussenegger/nvim-dap',
     config = function ()
-    end
-  },
-
-  -- nvim lua dap
-  {
-    'jbyuki/one-small-step-for-vimkind',
-    config = function ()
-      require'alef.dap'.nlua()
+      require'alef.dap'.setup()
     end,
-    require = { 'mfussenegger/nvim-dap' },
+    require = {
+      -- nvim lua debugger
+      { 'jbyuki/one-small-step-for-vimkind' },
+    }
   },
 
   -- Main code display

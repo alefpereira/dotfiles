@@ -32,4 +32,8 @@ function M.nlua()
   end
 end
 
+function M.setup()
+  M.nlua()
+end
+
 return M
