@@ -53,7 +53,7 @@ set.undodir = vim.fn.getenv 'HOME' .. '/.vim/undodir'
 set.undofile = true
 set.hidden = true
 -- Hide Pattern not found message from completion
-set.shortmess = vim.o.shortmess .. "c"
+set.shortmess = vim.o.shortmess .. 'c'
 
 -- ====== Other settings ======
 -- Let vim to highlight embeded code: Lua, Python

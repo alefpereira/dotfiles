@@ -1,10 +1,10 @@
-local telescope_ok, telescope = pcall(require, "telescope")
+local telescope_ok, telescope = pcall(require, 'telescope')
 if not telescope_ok then
    return
 end
 
-local actions = require("telescope.actions")
-local action_layout = require("telescope.actions.layout")
+local actions = require('telescope.actions')
+local action_layout = require('telescope.actions.layout')
 local utils = require('telescope.utils')
 
 local M = {}
@@ -30,9 +30,9 @@ function M.setup()
       },
       mappings = {
         i = {
-          ["<esc>"] = actions.close,
-          ["<c-j>"] = actions.select_default,
-          ["<c-s>"] = action_layout.toggle_preview,
+          ['<esc>'] = actions.close,
+          ['<c-j>'] = actions.select_default,
+          ['<c-s>'] = action_layout.toggle_preview,
         },
       }
     },
@@ -89,7 +89,7 @@ function M.setup()
         fuzzy = true,
         override_generic_sorter = true,
         override_file_sorter = true,
-        case_mode = "smart_case",
+        case_mode = 'smart_case',
       },
     },
   }
@@ -98,8 +98,8 @@ function M.setup()
 end
 
 function M.project_files()
-  local ok = pcall(require"telescope.builtin".git_files)
-  if not ok then require"telescope.builtin".find_files() end
+  local ok = pcall(require'telescope.builtin'.git_files)
+  if not ok then require'telescope.builtin'.find_files() end
 end
 
 return M

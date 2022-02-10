@@ -1,4 +1,4 @@
-local dap_ok, dap = pcall(require, "dap")
+local dap_ok, dap = pcall(require, 'dap')
 if not dap_ok then
    return
 end
@@ -8,19 +8,19 @@ local M = {}
 function M.nlua()
   dap.configurations.lua = {
     {
-      type = "nlua",
-      request = "attach",
-      name = "Attach to running Neovim instance",
+      type = 'nlua',
+      request = 'attach',
+      name = 'Attach to running Neovim instance',
       host = function()
-        local value = vim.fn.input("Host [127.0.0.1]: ")
-        if value ~= "" then
+        local value = vim.fn.input('Host [127.0.0.1]: ')
+        if value ~= '' then
           return value
         end
-        return "127.0.0.1"
+        return '127.0.0.1'
       end,
       port = function()
-        local val = tonumber(vim.fn.input("Port: "))
-        assert(val, "Please provide a port number")
+        local val = tonumber(vim.fn.input('Port: '))
+        assert(val, 'Please provide a port number')
         return val
       end,
     }
