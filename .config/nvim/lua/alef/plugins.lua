@@ -113,6 +113,22 @@ M.plugins = {
   -- vimspector - A multi-language debugging system for Vim
   --"puremourning/vimspector"
 
+  -- nvim-dap Debug
+  {
+    "mfussenegger/nvim-dap",
+    config = function ()
+    end
+  },
+
+  -- nvim lua dap
+  {
+    "jbyuki/one-small-step-for-vimkind",
+    config = function ()
+      require"alef.dap".nlua()
+    end,
+    require = { "mfussenegger/nvim-dap" },
+  },
+
   -- Main code display
   -- A vim plugin to display the indention levels with thin vertical lines
   "Yggdroot/indentLine",
