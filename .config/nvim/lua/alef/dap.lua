@@ -32,8 +32,33 @@ function M.nlua()
   end
 end
 
+function M.python()
+  dap.adapters.python = {
+    type = 'executable';
+    command = vim.fn.getenv 'PYENV_ROOT' .. '/versions/debugpy/bin/python';
+    args = { '-m', 'debugpy.adapter' };
+  }
+
+  dap.configurations.python = {
+    {
+      -- The first three options are required by nvim-dap
+      type = 'python'; -- the type here established the link to the adapter definition: `dap.adapters.python`
+      request = 'launch';
+      name = "Launch file";
+      program = "${file}"; -- This configuration will launch the current file if used.
+      pythonPath = function()
+        return vim.api.nvim_exec(
+          [[python3 import sys; print(sys.executable)]],
+          true
+        )
+      end;
+    },
+  }
+end
+
 function M.setup()
   M.nlua()
+  M.python()
 end
 
 return M

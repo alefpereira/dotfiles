@@ -118,3 +118,12 @@ cmd[[nnoremap <leader>xd <cmd>TroubleToggle document_diagnostics<cr>]]
 cmd[[nnoremap <leader>xq <cmd>TroubleToggle quickfix<cr>]]
 cmd[[nnoremap <leader>xl <cmd>TroubleToggle loclist<cr>]]
 cmd[[nnoremap gR <cmd>TroubleToggle lsp_references<cr>]]
+
+-- inspect continue
+cmd[[nnoremap <silent> <F5> <cmd>lua require'dap'.continue()<cr>]]
+-- inspect breakpoint
+cmd[[nnoremap <silent> <F9> <cmd>lua require'dap'.toggle_breakpoint()<cr>]]
+-- inspect step over
+cmd[[nnoremap <silent> <F10> <cmd>lua require'dap'.step_over()<cr>]]
+-- inspect enter
+cmd[[nnoremap <silent> <F11> <cmd>lua require'dap'.step_into()<cr>]]

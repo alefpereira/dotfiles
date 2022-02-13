@@ -21,6 +21,9 @@ function M.setup()
   cmd('highlight GitSignsAdd      ctermfg=2 ctermbg=234')
   cmd('highlight GitSignsChange   ctermfg=4 ctermbg=234')
   cmd('highlight GitSignsDelete   ctermfg=9 ctermbg=234')
+
+  -- dap breakpoint sign
+  cmd[[highlight DapBreakpointSign ctermfg=9]]
 end
 
 return M

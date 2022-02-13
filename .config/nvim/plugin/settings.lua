@@ -92,3 +92,10 @@ augroup FILETYPES
   autocmd FileType markdown set conceallevel=0
 augroup END
 ]], false)
+
+-- dap breakpoint sign
+vim.fn.sign_define('DapBreakpoint', {
+  text='⏺',
+  texthl='DapBreakpointSign', -- highlight group; see colors
+  linehl='',
+  numhl=''})
