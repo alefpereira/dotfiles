@@ -127,3 +127,5 @@ cmd[[nnoremap <silent> <F9> <cmd>lua require'dap'.toggle_breakpoint()<cr>]]
 cmd[[nnoremap <silent> <F10> <cmd>lua require'dap'.step_over()<cr>]]
 -- inspect enter
 cmd[[nnoremap <silent> <F11> <cmd>lua require'dap'.step_into()<cr>]]
+-- scopes sidebar
+cmd[[nnoremap <leader>i <cmd>lua require('alef.dap').scopes_sidebar.toggle()<cr>]]

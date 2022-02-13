@@ -3,6 +3,8 @@ if not dap_ok then
    return
 end
 
+local widgets = require('dap.ui.widgets')
+
 local M = {}
 
 -- lua debugger: one-small-step-for-vimkind
@@ -55,6 +57,8 @@ function M.python()
     },
   }
 end
+
+M.scopes_sidebar = widgets.sidebar(widgets.scopes)
 
 function M.setup()
   M.nlua()
