@@ -34,6 +34,11 @@ function M.nlua()
   end
 end
 
+local pythonPath = vim.api.nvim_exec(
+  [[python3 import sys; print(sys.executable)]],
+  true
+)
+
 function M.python()
   dap.adapters.python = {
     type = 'executable';
@@ -48,12 +53,7 @@ function M.python()
       request = 'launch';
       name = "Launch file";
       program = "${file}"; -- This configuration will launch the current file if used.
-      pythonPath = function()
-        return vim.api.nvim_exec(
-          [[python3 import sys; print(sys.executable)]],
-          true
-        )
-      end;
+      pythonPath = pythonPath;
     },
   }
 end
