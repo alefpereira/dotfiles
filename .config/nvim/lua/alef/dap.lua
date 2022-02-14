@@ -34,10 +34,16 @@ function M.nlua()
   end
 end
 
-local pythonPath = vim.api.nvim_exec(
-  [[python3 import sys; print(sys.executable)]],
-  true
-)
+local function getPythonPath()
+  local pythonPath = vim.api.nvim_exec(
+    [[!python3 -c 'import sys; print(sys.executable)']],
+    true
+  )
+  pythonPath = vim.split(pythonPath, '\n')[3]
+  return pythonPath
+end
+
+local pythonPath = getPythonPath()
 
 function M.python()
   dap.adapters.python = {
