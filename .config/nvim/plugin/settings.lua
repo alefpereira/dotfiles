@@ -62,6 +62,14 @@ vim.g.vimsyn_embed='lP'
 -- Indent Lines config
 vim.g.indentLine_color_term = 237
 vim.g.indentLine_char = '▏'
+-- Fix conceal for json and markdown files
+-- since i'm using default vim syntax (not using any plugin), these vars
+-- disable conceal for their specific file type but keeps showing indentLines
+-- (i.e. JSON). See vim files:
+--   runtime/syntax/json.vim
+--   runtime/syntax/markdown.vim
+vim.g.vim_json_conceal=0
+vim.g.markdown_syntax_conceal=0
 
 -- Fixed python syntax
 vim.g.python_highlight_all = 1
@@ -81,16 +89,6 @@ function! ExecuteMacroOverVisualRange()
 endfunction
 
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
-]], false)
-
-
--- markdown
--- This interacts with Yggdroot/indentLine plugin: Disable conceal for markdown
-vim.api.nvim_exec([[
-augroup FILETYPES
-  autocmd FileType markdown let b:indentLine_enabled = 0
-  autocmd FileType markdown set conceallevel=0
-augroup END
 ]], false)
 
 -- dap breakpoint sign
