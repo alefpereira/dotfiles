@@ -33,6 +33,8 @@ function M.setup()
           ['<esc>'] = actions.close,
           ['<c-j>'] = actions.select_default,
           ['<c-s>'] = action_layout.toggle_preview,
+          ['<c-i>'] = actions.cycle_history_next,
+          ['<c-o>'] = actions.cycle_history_prev,
         },
       }
     },
