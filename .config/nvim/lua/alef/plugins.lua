@@ -119,7 +119,7 @@ M.plugins = {
     config = function ()
       require'alef.dap'.setup()
     end,
-    require = {
+    requires = {
       -- nvim lua debugger
       { 'jbyuki/one-small-step-for-vimkind' },
     }
