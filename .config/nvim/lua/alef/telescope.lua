@@ -103,9 +103,8 @@ function M.live_grep_raw(opts)
       anchor = 'S',
     },
   }
-  opts = vim.tbl_extend("force", defaults, opts or {})
-  -- Apply theme
-  opts = require("telescope.themes")["get_" .. opts.theme](opts)
-  require("telescope").extensions.live_grep_raw.live_grep_raw(opts)
+  opts = vim.tbl_extend('force', defaults, opts or {})
+  opts = require('telescope.themes')['get_' .. opts.theme](opts) -- Apply theme
+  telescope.extensions.live_grep_raw.live_grep_raw(opts)
 end
 return M
