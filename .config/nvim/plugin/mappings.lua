@@ -106,7 +106,7 @@ cmd('nnoremap K :lua vim.lsp.buf.hover()<CR>')
 -- Telescope (telescope.nvim)
 cmd[[nnoremap <c-p> <cmd>lua require('alef.telescope').project_files()<cr>]]
 cmd[[nnoremap <silent> <leader>b <cmd>Telescope buffers<cr>]]
-cmd[[nnoremap <leader>f <cmd>Telescope live_grep<cr>]]
+cmd[[nnoremap <leader>f <cmd>lua require('alef.telescope').live_grep_raw()<cr>]]
 cmd('nnoremap <leader>tr <cmd>Telescope resume<cr>')
 cmd('nnoremap <leader>tp <cmd>Telescope pickers<cr>')
 cmd('nnoremap <leader>th <cmd>Telescope help_tags<cr>')

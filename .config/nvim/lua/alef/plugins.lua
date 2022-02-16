@@ -22,6 +22,7 @@ M.plugins = {
     requires = {
       { 'nvim-lua/plenary.nvim' },
       { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+      { 'nvim-telescope/telescope-live-grep-raw.nvim' },
     }
   },
 

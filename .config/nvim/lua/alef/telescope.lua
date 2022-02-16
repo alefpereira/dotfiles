@@ -69,14 +69,6 @@ function M.setup()
           anchor = 'N',
         },
       },
-      live_grep = {
-        vimgrep_arguments = vim.split(M.vimgrep_arguments, ' '),
-        path_display = M.filename_path_display,
-        theme = 'dropdown',
-        layout_config = {
-          anchor = 'S',
-        }
-      },
       help_tags = {
         theme='dropdown',
         layout_config = {
@@ -102,4 +94,18 @@ function M.project_files()
   if not ok then require'telescope.builtin'.find_files() end
 end
 
+function M.live_grep_raw(opts)
+  local defaults = {
+    vimgrep_arguments = vim.split(M.vimgrep_arguments, ' '),
+    path_display = M.filename_path_display,
+    theme = 'dropdown',
+    layout_config = {
+      anchor = 'S',
+    },
+  }
+  opts = vim.tbl_extend("force", defaults, opts or {})
+  -- Apply theme
+  opts = require("telescope.themes")["get_" .. opts.theme](opts)
+  require("telescope").extensions.live_grep_raw.live_grep_raw(opts)
+end
 return M
