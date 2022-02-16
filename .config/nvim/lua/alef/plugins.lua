@@ -9,7 +9,9 @@ M.plugins = {
   {
     'tpope/vim-fugitive',
     config = function()
-       require 'alef.git'
+      require 'alef.git'
+      -- fold file diffs
+      vim.cmd'autocmd User FugitiveCommit set foldmethod=syntax'
     end,
   },
 
