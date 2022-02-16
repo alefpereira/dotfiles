@@ -82,14 +82,14 @@ vim.g.netrw_banner = 0
 -- Execute macros over visual range
 -- visual-at from:
 --    https://github.com/stoeffel/.dotfiles/blob/master/vim/visual-at.vim
-vim.api.nvim_exec([[
+cmd[[
 function! ExecuteMacroOverVisualRange()
   echo "@".getcmdline()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
 
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
-]], false)
+]]
 
 -- dap breakpoint sign
 vim.fn.sign_define('DapBreakpoint', {
