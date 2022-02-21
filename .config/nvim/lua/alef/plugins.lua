@@ -24,7 +24,7 @@ M.plugins = {
     requires = {
       { 'nvim-lua/plenary.nvim' },
       { 'natecraddock/telescope-zf-native.nvim' },
-      { 'alefpereira/telescope-live-grep-raw.nvim', branch = 'better-configuration' },
+      { 'alefpereira/telescope-rg.nvim', branch = 'better-configuration' },
     }
   },
 
