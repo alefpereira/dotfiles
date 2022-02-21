@@ -70,7 +70,16 @@ cmd('xnoremap <leader>d "_d')
 cmd('nnoremap <leader>l :ls<cr>:b<space>')
 
 -- Vim Fugitive (vim-fugitive)
-cmd('nnoremap <leader>g :G<CR>')
+cmd[[function! ToggleGitStatus()
+  if buflisted(bufname('.git/index'))
+    bd .git/index
+  else
+    Git
+  endif
+endfunction
+command ToggleGitStatus :call ToggleGitStatus()
+nnoremap <leader>g :ToggleGitStatus<CR>
+]]
 
 -- Undotree
 cmd('nnoremap <leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>')

@@ -9,7 +9,6 @@ M.plugins = {
   {
     'tpope/vim-fugitive',
     config = function()
-      require 'alef.git'
       -- fold file diffs
       vim.cmd'autocmd User FugitiveCommit set foldmethod=syntax'
     end,
@@ -31,6 +30,9 @@ M.plugins = {
   -- nvim signs (depends on plenary.nvim)
   {
     'lewis6991/gitsigns.nvim',
+    config = function()
+      require 'alef.git'
+    end,
     requires = { 'nvim-lua/plenary.nvim' },
   },
 
