@@ -17,14 +17,14 @@ M.plugins = {
 
   -- Find, Filter, Preview, Pick. All lua, all the time.
   {
-    'alefpereira/telescope.nvim',
+    'alefpereira/telescope.nvim', branch = 'center-layout-strategy-allow-vertical-anchor',
     config = function()
       require'alef.telescope'.setup()
     end,
     requires = {
       { 'nvim-lua/plenary.nvim' },
       { 'natecraddock/telescope-zf-native.nvim' },
-      { 'alefpereira/telescope-live-grep-raw.nvim' },
+      { 'alefpereira/telescope-live-grep-raw.nvim', branch = 'better-configuration' },
     }
   },
 
