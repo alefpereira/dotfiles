@@ -14,11 +14,6 @@ export PATH="$HOME/Softwares/VSCode-linux-x64/bin/:$PATH"
 ## FZF Default command (I think i'm not using FZF anymore but i'll keep it)
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
 
-## N Node version manager
-export N_PREFIX=$HOME/.n
-export PATH="$N_PREFIX/bin:$PATH"
-export N_USE_XZ=1
-
 ## Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
