@@ -71,8 +71,8 @@ cmd('nnoremap <leader>l :ls<cr>:b<space>')
 
 -- Vim Fugitive (vim-fugitive)
 cmd[[function! ToggleGitStatus()
-  if buflisted(bufname('.git/index'))
-    bd .git/index
+  if buflisted(bufname('^fugitive://*.git//$'))
+    bd ^fugitive://*.git//$
   else
     Git
   endif
