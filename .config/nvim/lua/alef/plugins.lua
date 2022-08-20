@@ -16,7 +16,7 @@ M.plugins = {
 
   -- Find, Filter, Preview, Pick. All lua, all the time.
   {
-    'alefpereira/telescope.nvim', branch = 'center-layout-strategy-allow-vertical-anchor',
+    'nvim-telescope/telescope.nvim',
     config = function()
       require'alef.telescope'.setup()
     end,
