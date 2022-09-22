@@ -24,6 +24,12 @@ function M.setup()
 
   -- dap breakpoint sign
   cmd[[highlight DapBreakpointSign ctermfg=9]]
+  cmd('set termguicolors')
+  cmd[[highlight DiagnosticUnderlineError cterm=undercurl gui=undercurl]]
+  cmd[[highlight DiagnosticUnderlineWarn cterm=undercurl gui=undercurl]]
+
+  -- Diagnostic Colors
+  cmd[[highlight DiagnosticInfo ctermfg=lightblue]]
 end
 
 return M
