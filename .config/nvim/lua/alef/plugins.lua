@@ -36,6 +36,15 @@ M.plugins = {
     requires = { 'nvim-lua/plenary.nvim' },
   },
 
+  -- Show color in color tags
+  {
+    'norcalli/nvim-colorizer.lua',
+    config = function()
+      vim.cmd('set termguicolors')
+      require 'colorizer'.setup()
+    end
+  },
+
   -- Inject LSP diagnostics, code actions, and more via Lua
   {
     'jose-elias-alvarez/null-ls.nvim',
