@@ -18,6 +18,9 @@ function nvimvenv
      and test -n "$(upfind pyproject.toml)";
      and command -v poetry 1>/dev/null;
      and test -d (poetry env info -p) 2>/dev/null
+    echo 'Running nvim through poetry...'
+    echo -n 'For faster startup, prefer running "poetry shell" before '
+    echo 'starting nvim.'
     poetry run nvim $argv
     return
   end
